@@ -1,75 +1,78 @@
 <body>
-<main class="wrapper">
-  <div class="center">
-    <div class="leading-picture-area">
-      <%=image_tag("leadingphoto.jpg", class: "leading-photo", alt: "Close up shot of me", height: "65%", width: "75%") %>
+  <main class="wrapper">
+    <div class="center">
+      <div class="leading-picture-area">
+        <%=image_tag("leadingphoto.jpg", class: "leading-photo", alt: "Close up shot of me", height: "65%", width: "75%") %>
+      </div>
+      <h1>
+        <b>Jacob Dylan Moore</b>
+      </h1>
     </div>
-    <h1>
-      <b>Jacob Dylan Moore</b>
-    </h1>
-  </div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <div class="panel">
-        <div class="panel-heading">
-          Latest News and Projects
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel">
+          <div class="panel-heading">
+            Latest News and Projects
+            <div class="float-right right">
+              <a href="#"> View all </a>
+            </div>
+          </div>
+          <div class="panel-body">
+            Coming Soon!
+          </div>
         </div>
-        <div class="panel-body">
-          Coming Soon!
+      </div>
+      <div class="col-md-6">
+        <div class="panel">
+          <div class="panel-heading">
+            Social Media
+          </div>
+          <div class="panel-body right">
+            <!-- Jake made plug-ins -->
+            <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank" class="social-media-icon">
+              <%=image_tag("linkedin-icon.png", alt: "LinkedIn link to profile", height: "50", width: "50") %>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100009516678068" target="_blank" class="social-media-icon">
+              <%=image_tag("fb-icon.png", alt: "Facebook link to profile", height: "50", width: "50") %>
+            </a>
+            <a href="https://twitter.com/jakedoesNASA" target="_blank" class="social-media-icon">
+              <%=image_tag("twitter-icon.png", alt: "Twitter link to profile", height: "50", width: "50") %>
+            </a>
+
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <div class="panel">
-        <div class="panel-heading">
-          Social Media
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel">
+          <div class="panel-heading">
+            Recent Blog Posts
+            <div class="float-right right">
+              <a href="#"> View all </a>
+            </div>
+          </div>
+          <div class="panel-body">
+            Coming soon!
+          </div>
         </div>
-        <div class="panel-body right">
-          <!-- Jake made plug-ins -->
-          <a href="https://www.linkedin.com/in/jacob-moore-168990115/" class="social-media-icon">
-            <%=image_tag("linkedin-icon.png", alt: "LinkedIn link to profile", height: "50", width: "50") %>
-          </a>
-          <a href="https://www.facebook.com/profile.php?id=100009516678068" class="social-media-icon">
-            <%=image_tag("fb-icon.png", alt: "Facebook link to profile", height: "50", width: "50") %>
-          </a>
-          <a href="https://twitter.com/jakedoesNASA" class="social-media-icon">
-            <%=image_tag("twitter-icon.png", alt: "Twitter link to profile", height: "50", width: "50") %>
-          </a>
+      </div>
+      <div class="col-md-6">
+        <div class="">
+          <%=link_to "New Link &rarr;".html_safe, about_path, class: "sidebar-link" %>
+          <%=link_to "More stuff &rarr;".html_safe, projects_path, class: "sidebar-link" %>
+          <%=link_to "Contact &rarr;".html_safe, contact_path, class: "sidebar-link" %>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <div class="panel">
-        <div class="panel-heading">
-          Recent Blog Posts
-        </div>
-        <div class="panel-body">
-          Coming soon!
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <a href="#" class="sidebar-link">
-        <h2>About &rarr;</h2>
-      </a>
-      <a href="#" class="sidebar-link">
-        <h2>Projects &rarr;</h2>
-      </a>
-      <a href="#" class="sidebar-link">
-        <h2>Contact &rarr;</h2>
-      </a>
-    </div>
-  </div>
-
-  <button onclick="topFunction()" id="back-to-top">&uarr;</button>
-</main>
+    <button onclick="topFunction()" id="back-to-top">&uarr;</button>
+  </main>
 </body>
 <footer class="center">
   ______
   <br>
-  Designed and Created by Jacob "Stallion Pennywhether" Moore
+  Designed and Created by Jacob Moore. View the source code on <a href="https://github.com/Jake25k" target="_blank"> GitHub</a>.
 </footer>

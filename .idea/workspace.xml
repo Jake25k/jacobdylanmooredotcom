@@ -2,80 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d6d7828-eab3-4a80-92a2-a5955567c742" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/Gemfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/Gemfile.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/assets/config/manifest.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/assets/images/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/assets/javascripts/application.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/assets/javascripts/cable.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/assets/javascripts/channels/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/assets/stylesheets/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/channels/application_cable/channel.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/channels/application_cable/connection.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/controllers/application_controller.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/controllers/concerns/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/helpers/application_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/jobs/application_job.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/mailers/application_mailer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/models/application_record.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/models/concerns/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/views/layouts/application.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/views/layouts/mailer.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/app/views/layouts/mailer.text.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/bin/bundle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/bin/rails" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/bin/rake" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/bin/setup" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/bin/update" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config.ru" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/application.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/boot.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/cable.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/database.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/environment.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/environments/development.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/environments/production.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/environments/test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/application_controller_renderer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/assets.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/backtrace_silencers.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/cookies_serializer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/filter_parameter_logging.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/inflections.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/mime_types.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/new_framework_defaults.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/session_store.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/initializers/wrap_parameters.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/locales/en.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/puma.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/routes.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/secrets.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/config/spring.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/db/seeds.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/lib/assets/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/lib/tasks/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/log/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/422.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/500.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/apple-touch-icon-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/apple-touch-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/public/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/controllers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/fixtures/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/fixtures/files/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/helpers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/integration/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/mailers/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/models/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/test/test_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/tmp/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/vendor/assets/javascripts/.keep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jacobdylanmooredotcom/vendor/assets/stylesheets/.keep" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Z1/Z1nEhrIpygle_NeqiWlCZuVmfNU3NGbNvm54Ry0lS7A.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Z1/Z1nEhrIpygle_NeqiWlCZuVmfNU3NGbNvm54Ry0lS7A.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/mZ/mZahS-QGdQQLqTKgYLdQkeS5-0a3Ya2rBdsL8EIo83k.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/mZ/mZahS-QGdQQLqTKgYLdQkeS5-0a3Ya2rBdsL8EIo83k.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ps/psm-yrFbCQ4P3gqspzFz20QM2l-0A72zBOLbVV773OM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/ps/psm-yrFbCQ4P3gqspzFz20QM2l-0A72zBOLbVV773OM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/w-/w-cE10Lnf7byLP8Eq7YW9Tuwb7_8OsbqVAadrRRmiCk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/w-/w-cE10Lnf7byLP8Eq7YW9Tuwb7_8OsbqVAadrRRmiCk.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/homepage.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/homepage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homepage/index.html.erb" afterPath="$PROJECT_DIR$/app/views/homepage/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="jacobdylanmooredotcom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,63 +39,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="homepage_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/homepage_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.css.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/homepage/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+            <state relative-caret-position="279">
+              <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/homepage.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/static/contact.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -172,14 +79,18 @@
       <list>
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/homepage_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/homepage/index.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/controllers/static_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/homepage.js" />
+        <option value="$PROJECT_DIR$/app/views/static/contact.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" />
+        <option value="$PROJECT_DIR$/app/views/homepage/index.html.erb" />
       </list>
     </option>
   </component>
@@ -190,10 +101,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="44" />
-    <option name="y" value="119" />
+    <option name="y" value="22" />
     <option name="width" value="1366" />
-    <option name="height" value="679" />
+    <option name="height" value="682" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -220,7 +130,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,26 +162,8 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jacobdylanmooredotcom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jacobdylanmooredotcom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -289,33 +181,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jacobdylanmooredotcom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jacobdylanmooredotcom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,17 +200,13 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,22 +400,23 @@
       <option name="presentableId" value="Default" />
       <updated>1496935749321</updated>
       <workItem from="1496935751578" duration="5736000" />
-      <workItem from="1497012136705" duration="1431000" />
+      <workItem from="1497012136705" duration="6168000" />
+      <workItem from="1497270137889" duration="152000" />
+      <workItem from="1497277394921" duration="4059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7167000" />
+    <option name="totallyTimeSpent" value="16115000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="119" width="1366" height="679" extended-state="0" />
+    <frame x="0" y="22" width="1366" height="682" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25377643" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2613293" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -561,6 +428,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -581,11 +449,18 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/homepage/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/homepage_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="84" selection-start-line="7" selection-start-column="84" selection-end-line="7" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -609,7 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -625,7 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -633,7 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -641,7 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,61 +520,108 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-    <entry file="file://$PROJECT_DIR$/app/views/homepage/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/homepage_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static/about.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static/projects.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-321">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/homepage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="300">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/static/contact.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/homepage.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        <state relative-caret-position="360">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/homepage/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="64" column="32" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
           <folding />
         </state>
       </provider>
