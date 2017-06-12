@@ -1,9 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "homepage";
 
-/* main css */
+
+/* universal css */
 body{
-  background-image: url("../images/bg.jpg");
+  //background: url("/assets/bg.jpg");
+  background-size: cover;
 }
 
 .wrapper {
@@ -17,15 +20,8 @@ body{
   text-align: right;
 }
 
-.leading-photo {
-  padding: 10px;
-  border: 1px solid;
-  border-color: #ddd;
-  display: none;
-}
-
-.leading-picture-area{
-  height: 90%;
+.float-right{
+  float: right;
 }
 
 #back-to-top {
@@ -39,41 +35,26 @@ body{
   background-color: #222;
   color: white;
   cursor: pointer;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 #back-to-top:hover {
   background-color: black; /* Add a dark-grey background on hover */
 }
 
-a.social-media-icon{
-  text-decoration: none;
-}
-
-a {
-  sidebar-link {
-    color: white;
-  }
-}
-
-h2{
-    background-color: #222;
-    text-align: center;
-}
-
-  /* bootstrap edits */
+/* bootstrap edits */
 
 .navbar {
   border-radius: 0px;
 }
 
 .panel{
-  border-radius: 1px;
+  border-radius: 2px;
 }
 
 .panel-heading{
   background-color: #222;
   color: white;
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
