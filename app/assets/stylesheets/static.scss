@@ -1,3 +1,68 @@
-// Place all the styles related to the Static controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//Remove margin for about page
+.navbar{
+  margin-bottom: 0px;
+}
+
+.parallax-text{
+  font-size: 500%;
+  color: white;
+  padding-top: 125px;
+}
+
+.parallax1 {
+  /* The image used */
+  background-image: url("aboutphoto1.jpg");
+  display: none;
+
+  /* Set a specific height */
+  height: 425px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url("aboutphoto2.jpg");
+
+  /* Set a specific height */
+  height: 325px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  /* The image used */
+  background-image: url("aboutphoto3.jpg");
+
+  /* Set a specific height */
+  height: 325px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax4 {
+  /* The image used */
+  background-image: url("aboutphoto4.jpg");
+
+  /* Set a specific height */
+  height: 325px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
