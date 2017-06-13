@@ -1,8 +1,3 @@
-//Remove margin for about page
-.navbar{
-  margin-bottom: 0px;
-}
-
 .parallax-text{
   font-size: 500%;
   color: white;
@@ -10,28 +5,25 @@
 }
 
 .parallax1 {
-  /* The image used */
   background-image: url("aboutphoto1.jpg");
   display: none;
 
-  /* Set a specific height */
   height: 425px;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  //reversing bootstraps margin for the navbar
+  margin-top: -20px;
 }
 
 .parallax2 {
-  /* The image used */
   background-image: url("aboutphoto2.jpg");
 
-  /* Set a specific height */
   height: 325px;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,13 +31,10 @@
 }
 
 .parallax3 {
-  /* The image used */
   background-image: url("aboutphoto3.jpg");
 
-  /* Set a specific height */
   height: 325px;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,16 +42,12 @@
 }
 
 .parallax4 {
-  /* The image used */
   background-image: url("aboutphoto4.jpg");
 
-  /* Set a specific height */
   height: 325px;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
