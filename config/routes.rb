@@ -11,8 +11,5 @@ Rails.application.routes.draw do
   get '/contact',    to: 'static#contact',     as: 'contact'
 
   # Devise admin material
-  # devise_scope :Admin do
-  #   get 'login', to: 'devise/sessions#new'
-  # end
-  devise_for :Admin
+  devise_for :Admin, path: 'admin', path_names: { sign_in: 'login' }
 end

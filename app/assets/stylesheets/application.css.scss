@@ -6,13 +6,37 @@
 
 /* universal css */
 body{
-  //background: url("/assets/bg.jpg");
+  background: url("/assets/bg.jpg") center center fixed;
+  background-color: lightgrey;
   background-size: cover;
+}
+
+footer{
+  p {
+    background-color: white;
+    border-radius: 2px;
+    width: 35%;
+    min-width: 35%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+
+::selection {
+  background: darkgrey;
+}
+::-moz-selection { /* Code for Firefox */
+  background: darkgrey;
 }
 
 .wrapper {
   width: 75%;
   margin: auto;
+}
+.panel-custom-wrapper{
+  width:80%;
+  margin: auto;
+  margin-bottom: 20px;
 }
 .center {
   text-align: center;
@@ -33,15 +57,26 @@ body{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #222;
-  color: white;
+  background-color: white;
+  color: #222;
   cursor: pointer;
   border-radius: 2px;
 }
 
 #back-to-top:hover {
-  background-color: black; /* Add a dark-grey background on hover */
+  background-color: lightgrey; /* Add a dark-grey background on hover */
 }
+
+.padding-top{
+  padding-top: 5px;
+}
+.padding-bottom{
+  padding-bottom: 5px;
+}
+.long-padding-bottom{
+  padding-bottom: 45px;
+}
+
 
 /* bootstrap edits */
 
@@ -54,9 +89,19 @@ body{
   border: 1px solid #222;
 }
 
+.panel-custom{
+  border-radius: 4px;
+  border: none;
+}
+
 .panel-heading{
   background-color: #222;
   color: white;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.norowdisturbance{
+  margin-left: 0px;
+  margin-right: 0px;
 }
