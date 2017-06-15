@@ -1,14 +1,21 @@
 .parallax-text{
-  font-size: 500%;
+  font-size: 5.6rem;
   color: white;
   padding-top: 125px;
+  text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
+}
+.long-parallax-text{
+  font-size: 2.6rem;
+  color: white;
+  padding-top: 125px;
+  text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 
 .parallax1 {
   background-image: url("aboutphoto1.jpg");
   display: none;
 
-  height: 425px;
+  height: 375px;
 
   background-attachment: fixed;
   background-position: center;
@@ -30,24 +37,17 @@
   background-size: cover;
 }
 
-.parallax3 {
-  background-image: url("aboutphoto3.jpg");
-
-  height: 325px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.aboutembededphoto{
+  height: 220px;
+  width: auto;
+  word-break: break-all;
 }
 
-.parallax4 {
-  background-image: url("aboutphoto4.jpg");
-
-  height: 325px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.aboutsection{
+  background-color: #222;
+  color: white;
+  font-size: medium;
+  padding-left: 2px;
+  padding-top: 5px;
 }
+
