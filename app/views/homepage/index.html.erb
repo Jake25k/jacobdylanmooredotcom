@@ -1,76 +1,64 @@
 <body>
-  <div class="panel-custom-wrapper panel panel-custom">
-    <div class="center">
-      <div class="parallax-homepage leading-photo">
-        <div class="center parallax-homepage-text">
-          Jacob Dylan Moore
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-md-7 center">
+        <div class="parallax-homepage leading-photo">
+          <div class="center parallax-homepage-text">
+            Jacob Dylan Moore
+          </div>
         </div>
       </div>
+      <main class="col-md-5">
+        <div class="row center">
+          <div>
+            <%=link_to "Contact &rarr;".html_safe, '', class: "sidebar-link", data: {toggle:'modal', target:'#myModal'}  %>
+          </div>
+          <div>
+            <div class="panel">
+              <div class="panel-heading">
+                Latest News and Projects
+                <div class="float-right right">
+                  <a href="#"> View all </a>
+                </div>
+              </div>
+              <div class="panel-body">
+                Coming Soon!
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-heading">
+                Recent Blog Posts
+                <div class="float-right right">
+                  <a href="#"> View all </a>
+                </div>
+              </div>
+              <div class="panel-body">
+                Coming soon!
+              </div>
+            </div>
+            <div class="panel">
+              <div class="panel-heading">
+                Social Media
+              </div>
+              <div class="panel-body right">
+                <!-- Jake made plug-ins -->
+                <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank" class="social-media-icon">
+                  <%=image_tag("linkedin-icon.png", alt: "LinkedIn link to profile", height: "auto", width: "50") %>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100009516678068" target="_blank" class="social-media-icon">
+                  <%=image_tag("fb-icon.png", alt: "Facebook link to profile", height: "50", width: "50") %>
+                </a>
+                <a href="https://twitter.com/jakedoesNASA" target="_blank" class="social-media-icon">
+                  <%=image_tag("twitter-icon.png", alt: "Twitter link to profile", height: "50", width: "50") %>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="topFunction()" id="back-to-top">&uarr;</button>
+      </main>
     </div>
-    <main class="wrapper">
-      <div class="row center">
-        <div class="col-md-6">
-          <button class="sidebar-link" data-toggle='modal' data-target='#myModal'> Résumé </button>
-        </div>
-        <div class="col-md-6">
-          <%=link_to "Contact".html_safe, contact_path, class: "sidebar-link" %>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="panel">
-            <div class="panel-heading">
-              Latest News and Projects
-              <div class="float-right right">
-                <a href="#"> View all </a>
-              </div>
-            </div>
-            <div class="panel-body">
-              Coming Soon!
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="panel">
-            <div class="panel-heading">
-              Social Media
-            </div>
-            <div class="panel-body right">
-              <!-- Jake made plug-ins -->
-              <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank" class="social-media-icon">
-                <%=image_tag("linkedin-icon.png", alt: "LinkedIn link to profile", height: "auto", width: "50") %>
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=100009516678068" target="_blank" class="social-media-icon">
-                <%=image_tag("fb-icon.png", alt: "Facebook link to profile", height: "50", width: "50") %>
-              </a>
-              <a href="https://twitter.com/jakedoesNASA" target="_blank" class="social-media-icon">
-                <%=image_tag("twitter-icon.png", alt: "Twitter link to profile", height: "50", width: "50") %>
-              </a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="panel">
-            <div class="panel-heading">
-              Recent Blog Posts
-              <div class="float-right right">
-                <a href="#"> View all </a>
-              </div>
-            </div>
-            <div class="panel-body">
-              Coming soon!
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <button onclick="topFunction()" id="back-to-top">&uarr;</button>
-    </main>
   </div>
 </body>
 <footer class="center">
@@ -88,12 +76,20 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title center" id="myModalLabel">Contact Information:</h4>
       </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
+      <div class="modal-body center">
+        <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank"> Linkedin </a>
+        |
+        <a href="https://www.facebook.com/profile.php?id=100009516678068" target="_blank"> Facebook </a>
+        |
+        <a href="https://twitter.com/jakedoesNASA" target="_blank"> Twitter</a>
+        |
+        <a href="https://github.com/Jake25k" target="_blank"> GitHub</a>
+
+        <p>
+          or request a résumé by email @ <%= mail_to "moorej37@mymail.nku.edu" %>
+        </p>
       </div>
     </div>
   </div>
