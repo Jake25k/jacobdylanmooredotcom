@@ -105,3 +105,15 @@ footer{
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.modal-header{
+  background-color: #222;
+  color: white;
+}
+.close{
+  color: white;
+  opacity: 1;
+  :hover{
+    color: white;
+  }
+}
