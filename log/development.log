@@ -26417,3 +26417,169 @@ Processing by HomepageController#index as HTML
 Completed 200 OK in 1009ms (Views: 989.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:30:30 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (1424.9ms)
+Completed 200 OK in 6554ms (Views: 6260.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:32:31 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (135.8ms)
+Completed 200 OK in 3758ms (Views: 3713.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:33:35 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (185.5ms)
+Completed 200 OK in 6092ms (Views: 6039.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:34:20 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (333.9ms)
+Completed 200 OK in 2441ms (Views: 2396.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2017-06-15 23:34:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (269.9ms)
+Completed 200 OK in 1786ms (Views: 1573.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-06-15 23:34:50 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fUXbt6+d2giViTvhvzQHr/sQry0cVT+UPr9kHEYfx35eugXMskfq206At+0ZuSmM9NKHyGtSq6kPhvSh76fJrg==", "admin"=>{"email"=>"jake@jake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (15.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "jake@jake.com"], ["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-06-16 03:34:50.590613"], ["last_sign_in_at", "2017-06-16 03:06:31.095830"], ["sign_in_count", 8], ["updated_at", "2017-06-16 03:34:50.656303"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 678ms (ActiveRecord: 23.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:34:50 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (177.3ms)
+  [1m[36mAdmin Load (5.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 733ms (Views: 717.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-15 23:34:58 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (3.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (89.8ms)
+Completed 200 OK in 828ms (Views: 744.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-15 23:35:02 -0400
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (164.7ms)
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1291ms (Views: 1247.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-15 23:36:03 -0400
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (69.2ms)
+  [1m[36mAdmin Load (6.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1529ms (Views: 1443.7ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-06-15 23:37:43 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WyOd+svclepctAbp8B2M0SitQbRHleBQmfq5Q13E3wlg7GobshhS9PWousenf2ryqEnGqXrSLYvlr7Xlue80EQ==", "project"=>{"title"=>"hey jsbbf ", "description"=>"", "content"=>"<img alt=\"\" src=\"http://i3.kym-cdn.com/entries/icons/square/000/001/030/dickbutt.jpg\">"}, "_wysihtml5_mode"=>"1", "commit"=>"Submit"}
+  [1m[35m (11.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (19.1ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?)[0m  [["title", "hey jsbbf "], ["content", "<img alt=\"\" src=\"http://i3.kym-cdn.com/entries/icons/square/000/001/030/dickbutt.jpg\">"], ["created_at", "2017-06-16 03:37:44.124410"], ["updated_at", "2017-06-16 03:37:44.124410"], ["description", ""]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 424ms (ActiveRecord: 35.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-15 23:37:44 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (9.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (92.4ms)
+Completed 200 OK in 4090ms (Views: 4063.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/projects/5" for 127.0.0.1 at 2017-06-15 23:37:55 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (20.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (91.7ms)
+  [1m[36mAdmin Load (10.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1824ms (Views: 1576.6ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-15 23:37:59 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 702ms (Views: 651.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:38:31 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (105.3ms)
+  [1m[36mAdmin Load (10.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1192ms (Views: 1160.9ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-15 23:38:44 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (88.6ms)
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 845ms (Views: 815.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-15 23:41:58 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (723.9ms)
+  [1m[36mAdmin Load (22.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4960ms (Views: 4793.8ms | ActiveRecord: 22.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-15 23:42:15 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (14.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (277.5ms)
+Completed 200 OK in 1996ms (Views: 1907.7ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-15 23:42:42 -0400
+Processing by HomepageController#index as HTML
+  Rendering homepage/index.html.erb within layouts/application
+  Rendered homepage/index.html.erb within layouts/application (295.4ms)
+  [1m[36mAdmin Load (10.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1970ms (Views: 1899.6ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-15 23:43:03 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (62.6ms)
+  [1m[36mAdmin Load (37.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2368ms (Views: 2195.0ms | ActiveRecord: 37.5ms)
+
+
