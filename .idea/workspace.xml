@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d6d7828-eab3-4a80-92a2-a5955567c742" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homepage/home.html.erb" afterPath="$PROJECT_DIR$/app/views/homepage/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/about.html.erb" afterPath="$PROJECT_DIR$/app/views/static/about.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="jacobdylanmooredotcom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,12 +28,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/homepage/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
               <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="45">
+                <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -100,6 +107,7 @@
         <option value="$PROJECT_DIR$/app/views/static/about.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" />
         <option value="$PROJECT_DIR$/app/views/homepage/home.html.erb" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -431,12 +439,12 @@
       <workItem from="1497012136705" duration="6168000" />
       <workItem from="1497270137889" duration="152000" />
       <workItem from="1497277394921" duration="14393000" />
-      <workItem from="1497356621461" duration="37222000" />
+      <workItem from="1497356621461" duration="37440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63671000" />
+    <option name="totallyTimeSpent" value="63889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1366" height="682" extended-state="0" />
@@ -479,13 +487,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="78" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/about.scss" />
     <entry file="file://$PROJECT_DIR$/app/views/static/contact.html.erb">
       <provider selected="true" editor-type-id="text-editor">
@@ -876,6 +877,17 @@
         <state relative-caret-position="24">
           <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
