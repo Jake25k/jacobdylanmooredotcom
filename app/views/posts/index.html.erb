@@ -12,7 +12,7 @@
     <% end %>
     <div>
       <table class="table table-striped">
-        <%-@posts.each do |post| %>
+        <%-@posts.order("created_at DESC").each do |post| %>
             <tr>
               <th> <%=link_to post.title, post_path(post.id) %> </th>
               <td> <%=truncate(post.content, length:50) %> </td>
