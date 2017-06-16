@@ -1,8 +1,12 @@
 .leading-photo {
   padding: 10px;
-  border: 2px solid;
-  border-color: #ddd;
   display: none;
+}
+
+.tiny-pic{
+  width: 100%;
+  height: auto;
+  cursor: pointer;
 }
 
 a.social-media-icon{
