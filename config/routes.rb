@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'static/pages'
 
   # Main Page
-  root 'homepage#index'
+  root 'homepage#home'
 
   # Static pages
   get '/about',      to: 'static#about',       as: 'about'

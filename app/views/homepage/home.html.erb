@@ -16,13 +16,22 @@
           <div>
             <div class="panel">
               <div class="panel-heading">
-                Latest News and Projects
+                Latest Projects
                 <div class="float-right right">
                   <%=link_to "View all", projects_path %>
                 </div>
               </div>
               <div class="panel-body">
-                Coming Soon!
+                <ol>
+                  <table>
+                    <%- @projects.each do |project| %>
+                      <tr>
+                        <th> <li> <%=link_to project.title, project_path(project.id) %> </li> </th>
+                        <td> <%=project.description %> </td>
+                      </tr>
+                    <% end %>
+                  </table>
+                </ol>
               </div>
             </div>
             <div class="panel">
@@ -33,7 +42,15 @@
                 </div>
               </div>
               <div class="panel-body">
-                Coming soon!
+                <ol>
+                  <table>
+                    <%- @posts.each do |post| %>
+                        <tr>
+                          <th> <li> <%=link_to post.title, post_path(post.id) %> </li> </th>
+                        </tr>
+                    <% end %>
+                  </table>
+                </ol>
               </div>
             </div>
             <div class="panel">
@@ -55,7 +72,6 @@
             </div>
           </div>
         </div>
-
         <button onclick="topFunction()" id="back-to-top">&uarr;</button>
       </main>
     </div>
@@ -65,7 +81,7 @@
   <p>
     ______
     <br>
-    Designed and Created by Jacob Dylan Moore. View the source code on <a href="https://github.com/Jake25k" target="_blank"> GitHub</a>.
+    Designed and Created by Jacob Moore. View the source code on <a href="https://github.com/Jake25k" target="_blank"> GitHub</a>.
   </p>
 </footer>
 
