@@ -2,6 +2,9 @@
 @import "bootstrap";
 @import "homepage";
 @import "static";
+@import "projects";
+@import "posts";
+@import "bootsy";
 
 
 /* universal css */
@@ -15,9 +18,10 @@ footer{
   p {
     background-color: white;
     border-radius: 2px;
-    width: 35%;
+    width: 38%;
     min-width: 35%;
     margin: auto;
+    margin-top: 50px;
     margin-bottom: 10px;
   }
 }
@@ -47,6 +51,9 @@ footer{
 
 .float-right{
   float: right;
+}
+.fixed-right{
+  fixed: right;
 }
 
 #back-to-top {
@@ -116,4 +123,8 @@ footer{
   :hover{
     color: white;
   }
+}
+
+.fix-bootsy{
+  background-image: none;
 }

@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="parallax-blog">
+    <div class="center parallax-text">
+      Personal Blog
+    </div>
+  </div>
+  <div class="panel">
+    <%-if current_admin %>
+        <div class="panel-body">
+          <%=link_to "New Post", new_post_path, class:"btn btn-primary" %>
+        </div>
+    <% end %>
+    <div>
+      <table class="table table-striped">
+        <%-@posts.each do |post| %>
+            <tr>
+              <th> <%=link_to post.title, post_path(post.id) %> </th>
+              <td> <%=truncate(post.content, length:50) %> </td>
+            </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

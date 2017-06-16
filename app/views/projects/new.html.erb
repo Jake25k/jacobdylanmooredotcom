@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="panel">
+    <div class="panel-heading">
+      Create New Project
+    </div>
+    <div class="panel-body">
+      <%= simple_form_for(@project) do |f| %>
+          <div class="field">
+            <%= f.label :title %><br>
+            <%= f.text_field :title %><br>
+            <%= f.label :description %><br>
+            <%= f.text_field :description %><br>
+            <%= f.label :content %><br>
+            <%= f.bootsy_area :content, class: "fix-bootsy", cols: "100", rows: "10" %><br>
+          </div>
+
+          <br>
+
+          <%= f.submit "Submit", class: "btn btn-primary" %>
+
+      <% end %>
+    </div>
+  </div>
+</div>

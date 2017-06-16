@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="panel">
+    <div class="panel-heading">
+      <h1>
+        <%= @project.title %>
+      </h1>
+      <div>
+        <%=link_to "Back", projects_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+    <div class="panel-body">
+      <%= (@project.content).html_safe %>
+    </div>
+  </div>
+</div>

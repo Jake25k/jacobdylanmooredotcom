@@ -19,13 +19,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <div class="navbar-brand"><%=ifAdminSession %> </div>
         </div>
 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
+            <% if current_admin %>
+              <li> <%=link_to "Log Out", destroy_admin_session_path, method: :delete %> </li>
+            <% end %>
             <li> <%=link_to "Home", root_path %> </li>
             <li> <%=link_to "About", about_path %> </li>
+            <li> <%=link_to "Blog", posts_path %> </li>
             <li> <%=link_to "Projects", projects_path %> </li>
           </ul>
         </div>
