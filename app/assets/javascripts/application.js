@@ -5,4 +5,5 @@
 //= require homepage
 //= require static
 //= require projects
+//= require bootsy
 //= require_tree .

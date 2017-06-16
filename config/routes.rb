@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # For wysiwyg editor for blog and projects
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
+
   get 'static/pages'
 
   # Main Page
@@ -7,8 +10,13 @@ Rails.application.routes.draw do
 
   # Static pages
   get '/about',      to: 'static#about',       as: 'about'
-  get '/projects',   to: 'static#projects',    as: 'projects'
 
-  # Devise admin material
-  devise_for :Admin, path: 'admin', path_names: { sign_in: 'login' }
+  # Projects
+  get resources :projects
+
+  # Blog
+  get resources :posts
+
+  # Devise admin
+  devise_for :admins, path: 'admin', path_names: { sign_in: 'login' }
 end

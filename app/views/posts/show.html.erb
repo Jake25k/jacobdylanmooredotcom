@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="panel">
+    <div class="panel-heading">
+      <h1>
+        <%= @post.title %>
+      </h1>
+      <div>
+        <%=link_to "Back", posts_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+    <div class="panel-body">
+      <%= (@post.content).html_safe %>
+    </div>
+  </div>
+</div>

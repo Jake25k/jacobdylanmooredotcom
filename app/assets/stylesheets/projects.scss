@@ -1,3 +1,19 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.parallax-projects {
+  background-image: url("projectsphoto.jpg");
+  display: none;
+
+  height: 375px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  //reversing bootstraps margin for the navbar
+  margin-top: -20px;
+}
+
+.back-to-projects-button{
+  position: fixed;
+  float: right;
+}
