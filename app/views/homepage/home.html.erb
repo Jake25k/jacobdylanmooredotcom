@@ -1,8 +1,8 @@
 <body>
   <div class="wrapper">
     <div class="row">
-      <div class="col-md-7 center">
-        <div class="parallax-homepage leading-photo">
+      <div class="col-md-7">
+        <div class="parallax-homepage leading-photo" data-toggle="modal" data-target="#myModal2">
           <div class="center parallax-homepage-text">
             Jacob Dylan Moore
           </div>
@@ -26,8 +26,8 @@
                   <table>
                     <%- @projects.each do |project| %>
                       <tr>
-                        <th> <li> <%=link_to project.title, project_path(project.id) %> </li> </th>
-                        <td> <%=project.description %> </td>
+                        <th> <li> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </li> </th>
+                        <td> <%=truncate(project.description, length: 15) %> </td>
                       </tr>
                     <% end %>
                   </table>
@@ -46,7 +46,8 @@
                   <table>
                     <%- @posts.each do |post| %>
                         <tr>
-                          <th> <li> <%=link_to post.title, post_path(post.id) %> </li> </th>
+                          <th> <li> <%=link_to truncate(post.title, length: 25), post_path(post.id) %> </li> </th>
+                          <td> <%=truncate(post.content, length: 15) %></td>
                         </tr>
                     <% end %>
                   </table>
@@ -86,7 +87,7 @@
 </footer>
 
 
-<!-- Modal -->
+<!-- Modal Contact -->
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -106,6 +107,17 @@
         <p>
           or request a résumé by email @ <%= mail_to "moorej37@mymail.nku.edu" %>
         </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Picture -->
+<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body center">
+        <%=image_tag 'leadingphoto.jpg', class: "tiny-pic" %>
       </div>
     </div>
   </div>
