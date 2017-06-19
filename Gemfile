@@ -7,7 +7,6 @@ gem 'bootstrap-sass', '3.2.0.2'
 gem 'better_errors'
 gem "binding_of_caller"
 gem 'devise'
-gem 'bootsy'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 # Use sqlite3 as the database for Active Record
