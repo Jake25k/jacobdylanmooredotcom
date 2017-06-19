@@ -12,12 +12,17 @@
     <% end %>
     <div>
       <table class="table table-striped">
+        <th> Project Name:</th>
+        <th> Description: </th>
         <%-@projects.order("created_at DESC").each do |project| %>
             <tr>
-              <th> <%=link_to project.title, project_path(project.id) %> </th>
+              <td> <%=link_to project.title, project_path(project.id) %> </td>
               <td> <%=project.description %> </td>
             </tr>
         <% end %>
+        <div class="center">
+          <%= will_paginate @projects %>
+        </div>
       </table>
     </div>
   </div>

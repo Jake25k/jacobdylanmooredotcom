@@ -12,12 +12,17 @@
     <% end %>
     <div>
       <table class="table table-striped">
+        <th> Post Name:</th>
+        <th> Description: </th>
         <%-@posts.order("created_at DESC").each do |post| %>
             <tr>
-              <th> <%=link_to post.title, post_path(post.id) %> </th>
+              <td> <%=link_to post.title, post_path(post.id) %> </td>
               <td> <%=truncate(post.content, length:50) %> </td>
             </tr>
         <% end %>
+        <div class="center">
+          <%= will_paginate @posts %>
+        </div>
       </table>
     </div>
   </div>
