@@ -7,13 +7,18 @@
             Jacob Dylan Moore
           </div>
         </div>
-        <div>
-          <%=link_to "Contact Me".html_safe, '', class: "sidebar-link", data: {toggle:'modal', target:'#myModal'}  %>
+        <div class="panel">
+          <div class="panel-heading center">
+            NASA Intern &#9679; Software Engineer &#9679; Student
+          </div>
         </div>
       </div>
       <main class="col-md-5">
         <div class="row center">
           <div>
+            <div>
+              <%=link_to "Contact Me".html_safe, '', class: "sidebar-link", data: {toggle:'modal', target:'#myModal'}  %>
+            </div>
             <div class="panel">
               <div class="panel-heading">
                 Latest Projects
@@ -48,23 +53,6 @@
                     </tr>
                   <% end %>
                 </table>
-              </div>
-            </div>
-            <div class="panel">
-              <div class="panel-heading">
-                Social Media
-              </div>
-              <div class="panel-body center">
-                <!-- Jake made plug-ins -->
-                <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank" class="social-media-icon">
-                  <%=image_tag("linkedin-icon.png", alt: "LinkedIn link to profile", height: "auto", width: "50") %>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100009516678068" target="_blank" class="social-media-icon">
-                  <%=image_tag("fb-icon.png", alt: "Facebook link to profile", height: "50", width: "50") %>
-                </a>
-                <a href="https://twitter.com/jakedoesNASA" target="_blank" class="social-media-icon">
-                  <%=image_tag("twitter-icon.png", alt: "Twitter link to profile", height: "50", width: "50") %>
-                </a>
               </div>
             </div>
           </div>

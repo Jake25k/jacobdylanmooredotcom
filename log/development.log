@@ -31950,3 +31950,1204 @@ Processing by StaticController#about as HTML
 Completed 200 OK in 585ms (Views: 549.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-19 08:46:11 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (14.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (7.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (859.8ms)
+Completed 200 OK in 3967ms (Views: 3520.7ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 08:46:29 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (100.8ms)
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 08:46:30 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 08:46:30 -0400
+  Rendered projects/index.html.erb within layouts/application (94.4ms)
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.8ms)
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 08:46:31 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 1998ms (Views: 1935.6ms | ActiveRecord: 4.8ms)
+
+
+Completed 200 OK in 1692ms (Views: 1634.5ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 2751ms (Views: 2681.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 800ms (Views: 792.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2017-06-19 08:46:37 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (9.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 898ms (Views: 692.6ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 08:46:40 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (8.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 421ms (Views: 403.9ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2017-06-19 08:47:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (196.1ms)
+Completed 200 OK in 803ms (Views: 704.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-06-19 08:47:33 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mjr+CSk0QAA0cEhA9lElNHZ8w032E3j9kDibkZtHSlgwV+n2fqJ+fNkP6QfWVkURVDLLUaH4zTiisCWQSqiyfQ==", "admin"=>{"email"=>"jake@jake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (4.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "jake@jake.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-06-19 12:47:33.701463"], ["last_sign_in_at", "2017-06-19 06:16:14.123457"], ["sign_in_count", 6], ["updated_at", "2017-06-19 12:47:33.712849"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 557ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 08:47:33 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (44.1ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 449ms (Views: 436.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 08:47:36 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 281ms (Views: 274.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 08:47:37 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (60.6ms)
+Completed 200 OK in 330ms (Views: 302.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:04:57 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (25.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (5.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (624.8ms)
+Started GET "/about" for 127.0.0.1 at 2017-06-19 16:04:58 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (195.8ms)
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1068ms (Views: 978.1ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 2493ms (Views: 2289.4ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:11:44 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (5.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (175.4ms)
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:11:46 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (11.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2149ms (Views: 2080.7ms | ActiveRecord: 10.4ms)
+
+
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (77.9ms)
+Completed 200 OK in 1012ms (Views: 905.9ms | ActiveRecord: 11.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateAdmins (20170613025615)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170613025615"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePosts (20170615040628)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170615040628"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProjects (20170615040721)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "content" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170615040721"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDescriptionToProjects (20170615194029)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "projects" ADD "description" text[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170615194029"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-06-19 20:19:07.436948"], ["updated_at", "2017-06-19 20:19:07.436948"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:19:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 29ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2017-06-19 16:19:24 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 3144ms (Views: 3131.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 16:19:31 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 176ms (Views: 159.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:19:33 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (7.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 372ms (Views: 260.4ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:19:39 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 345ms (Views: 266.4ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "jake@jake.com"], ["LIMIT", 1]]
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "jake@jake.com"], ["encrypted_password", "$2a$11$ZENPxBiNWRAJ4OjdllWi2.JKUhSP4udZWsZKuvXpQK6RQVJim8302"], ["created_at", "2017-06-19 20:19:55.548655"], ["updated_at", "2017-06-19 20:19:55.548655"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/admin/login" for 127.0.0.1 at 2017-06-19 16:20:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 246ms (Views: 222.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-06-19 16:20:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAdTw5KwvYM1/3cU4vTa1yS6IeN6i0e9gFfdeHCM3y8RJqDvXniDmm0W8QSodMmomq+ibcsAYjX7V99HvICGOQ==", "admin"=>{"email"=>"jake@jake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "jake@jake.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-06-19 20:20:11.193094"], ["last_sign_in_at", "2017-06-19 20:20:11.193094"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2017-06-19 20:20:11.195766"], ["id", 1]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects/new
+Completed 302 Found in 268ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:20:11 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (514.7ms)
+Completed 500 Internal Server Error in 534ms (ActiveRecord: 0.6ms)
+
+
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from call at /Users/jakemoore/.rvm/gems/ruby-2.2.2@global/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from call at /Users/jakemoore/.rvm/gems/ruby-2.2.2@global/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13)
+
+NoMethodError - undefined method `bootsy_area' for #<SimpleForm::FormBuilder:0x007fb8816ca728>:
+  app/views/projects/new.html.erb:14:in `block in _app_views_projects_new_html_erb___2842298595582065541_70215217993280'
+  actionview (5.0.3) lib/action_view/helpers/capture_helper.rb:39:in `block in capture'
+  actionview (5.0.3) lib/action_view/helpers/capture_helper.rb:203:in `with_output_buffer'
+  actionview (5.0.3) lib/action_view/helpers/capture_helper.rb:39:in `capture'
+  actionview (5.0.3) lib/action_view/helpers/form_helper.rb:450:in `form_for'
+  simple_form (3.3.1) lib/simple_form/action_view_extensions/form_helper.rb:26:in `block in simple_form_for'
+  simple_form (3.3.1) lib/simple_form/action_view_extensions/form_helper.rb:45:in `with_simple_form_field_error_proc'
+  simple_form (3.3.1) lib/simple_form/action_view_extensions/form_helper.rb:25:in `simple_form_for'
+  app/views/projects/new.html.erb:7:in `_app_views_projects_new_html_erb___2842298595582065541_70215217993280'
+  actionview (5.0.3) lib/action_view/template.rb:159:in `block in render'
+  activesupport (5.0.3) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (5.0.3) lib/action_view/template.rb:354:in `instrument'
+  actionview (5.0.3) lib/action_view/template.rb:157:in `render'
+  actionview (5.0.3) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (5.0.3) lib/action_view/renderer/abstract_renderer.rb:42:in `block in instrument'
+  activesupport (5.0.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (5.0.3) lib/action_view/renderer/abstract_renderer.rb:41:in `instrument'
+  actionview (5.0.3) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (5.0.3) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (5.0.3) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (5.0.3) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (5.0.3) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (5.0.3) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (5.0.3) lib/action_view/rendering.rb:104:in `_render_template'
+  actionpack (5.0.3) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (5.0.3) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (5.0.3) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+  actionpack (5.0.3) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+  actionpack (5.0.3) lib/abstract_controller/rendering.rb:26:in `render'
+  actionpack (5.0.3) lib/action_controller/metal/rendering.rb:36:in `render'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (5.0.3) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/jakemoore/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (5.0.3) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (5.0.3) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (5.0.3) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+  actionpack (5.0.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+  actionpack (5.0.3) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+  actionpack (5.0.3) lib/abstract_controller/base.rb:188:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+  actionpack (5.0.3) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:126:in `call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:455:in `call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (5.0.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (5.0.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (5.0.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (5.0.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (5.0.3) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+  activerecord (5.0.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (5.0.3) lib/abstract_controller/base.rb:126:in `process'
+  actionview (5.0.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (5.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+  actionpack (5.0.3) lib/action_controller/metal.rb:262:in `dispatch'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+  actionpack (5.0.3) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+  actionpack (5.0.3) lib/action_dispatch/journey/router.rb:26:in `serve'
+  actionpack (5.0.3) lib/action_dispatch/routing/route_set.rb:725:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (2.0.3) lib/rack/etag.rb:25:in `call'
+  rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+  rack (2.0.3) lib/rack/head.rb:12:in `call'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+  rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+  activerecord (5.0.3) lib/active_record/migration.rb:553:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+  activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+  actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+  web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+  web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+  railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+   () Users/jakemoore/.rvm/gems/ruby-2.2.2@global/gems/sprockets-rails-3.2.0/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+  rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+  activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+  actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+  rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+  railties (5.0.3) lib/rails/engine.rb:522:in `call'
+  puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+  puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+  puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+  puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+  puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+Started POST "/__better_errors/71ea58dcd1d50d10/variables" for 127.0.0.1 at 2017-06-19 16:20:12 -0400
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:20:47 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (3.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 574ms (Views: 521.9ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-06-19 16:20:52 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0a9ye9YgKg7416w/IddNdunZpxILhTBW8PJUOJt3+H99QHShMTSEcNgXr+98WGPUhpMxUGWMn2GdHuYFFQA0Zw==", "project"=>{"title"=>"csddsfs", "description"=>"fdsfsdf", "content"=>"sdfsdf"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?)[0m  [["title", "csddsfs"], ["content", "sdfsdf"], ["created_at", "2017-06-19 20:20:52.717536"], ["updated_at", "2017-06-19 20:20:52.717536"], ["description", "fdsfsdf"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 23ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:20:52 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 137ms (Views: 132.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:20:54 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (6.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 248ms (Views: 197.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-06-19 16:20:58 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/qNdgM6aFlV/UpRuxGQ/8o1zotRABe+jBQT6RAxbyqz8ybaL5tQ8N061ZDtj9vo9VYbuUmNgh+kj1CLXCYuikA==", "project"=>{"title"=>"fdsfdsfs", "description"=>"sdfdsfs", "content"=>"sdffsf"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fdsfdsfs"], ["content", "sdffsf"], ["created_at", "2017-06-19 20:20:58.762345"], ["updated_at", "2017-06-19 20:20:58.762345"], ["description", "sdfdsfs"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 19ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:20:58 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 175ms (Views: 169.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:21:00 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 137ms (Views: 132.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-06-19 16:21:04 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qy0NbecaaIIFDwQaYpLX6Ac/YDcHypvOpZvNPcfiJq5BR+Zmz1RC4DTo9E/FABIn38ossSSv84SDSxWuwjJOkg==", "project"=>{"title"=>"dsffsf", "description"=>"sddfs", "content"=>"sdfdfsdf"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?)[0m  [["title", "dsffsf"], ["content", "sdfdfsdf"], ["created_at", "2017-06-19 20:21:04.790963"], ["updated_at", "2017-06-19 20:21:04.790963"], ["description", "sddfs"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:21:04 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 130ms (Views: 122.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:21:06 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 194ms (Views: 186.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-06-19 16:21:09 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PePMcp1QvjdHyqcX/2JEEJJnjHT18YXlgsl0pRDPcNs/iSd5tR6UVXYtV0JY8IHfSpLA8taU7a+kGaw2FR8Y5w==", "project"=>{"title"=>"sdffsf", "description"=>"fdsfsfs", "content"=>"sdfsdfdsf"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sdffsf"], ["content", "sdfsdfdsf"], ["created_at", "2017-06-19 20:21:10.087727"], ["updated_at", "2017-06-19 20:21:10.087727"], ["description", "fdsfsfs"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 71ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:21:10 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 217ms (Views: 209.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 16:21:11 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 220ms (Views: 209.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-06-19 16:21:15 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2JFV3c1UrPYOfMLWVG/oPlK69xHBxnmwyn73d0TwZhba+77W5RqGlD+bMoPz/S3xik+7l+KjEfrsri/kQSAOKg==", "project"=>{"title"=>"sdfsffdsf", "description"=>"sdfsfdf", "content"=>"sddsfsdf"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.6ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description") VALUES (?, ?, ?, ?, ?)[0m  [["title", "sdfsffdsf"], ["content", "sddsfsdf"], ["created_at", "2017-06-19 20:21:15.431111"], ["updated_at", "2017-06-19 20:21:15.431111"], ["description", "sdfsfdf"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 22ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:21:15 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 345ms (Views: 337.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:21:17 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (18.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (59.5ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 192ms (Views: 156.3ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2017-06-19 16:21:44 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 351ms (Views: 289.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:21:53 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (2.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 218ms (Views: 208.5ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/admin/sign_out" for 127.0.0.1 at 2017-06-19 16:21:57 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"L9YwMEkLtrMYxv+Olh0I2+MjYn1BohNZBiF9cVM7bCGDOTbqrh8YzTgG/F7LkiZ5jGn0Py+rvG5rzc9M3UygOQ=="}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:21:57 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 99ms (Views: 95.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2017-06-19 16:22:00 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 121ms (Views: 113.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:22:02 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 122ms (Views: 113.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:24:50 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (43.6ms)
+Completed 200 OK in 394ms (Views: 361.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:25:42 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 233ms (Views: 203.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:26:00 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (6.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (209.6ms)
+Completed 200 OK in 719ms (Views: 674.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:26:06 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 316ms (Views: 286.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:27:10 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 199ms (Views: 178.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:27:57 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 230ms (Views: 214.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:28:03 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 357ms (Views: 320.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:28:15 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 224ms (Views: 199.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:28:21 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 376ms (Views: 341.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:28:39 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 336ms (Views: 313.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:30:52 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (4.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 3322ms (Views: 3264.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:31:06 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 2950ms (Views: 2927.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:31:18 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 2835ms (Views: 2809.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:32:01 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (59.6ms)
+Completed 200 OK in 347ms (Views: 326.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:32:08 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 143ms (Views: 138.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 16:32:10 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 104ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:32:17 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 273ms (Views: 228.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2017-06-19 16:33:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 310ms (Views: 271.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-06-19 16:33:27 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+JOVDwBbTaqeGyZTrF76u7wm7oH++6gRBFktnzPa+shRIl6RMlEb9pEv4Wozl9xvbPMsigH5M+AZCs86xQEwig==", "admin"=>{"email"=>"jake@jake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (3.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "jake@jake.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-06-19 20:33:28.193657"], ["sign_in_count", 2], ["updated_at", "2017-06-19 20:33:28.197463"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 250ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:33:28 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (22.3ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 160.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:36:00 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (7.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (53.3ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 701ms (Views: 674.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:39:42 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (51.2ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 277ms (Views: 255.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:41:55 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (11.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (3.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (168.2ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 669ms (Views: 586.5ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:42:12 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (4.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (13.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (111.9ms)
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 602ms (Views: 531.4ms | ActiveRecord: 20.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:42:54 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (6.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (97.9ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 618ms (Views: 535.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:43:27 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (9.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (100.9ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 536ms (Views: 487.1ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:43:49 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (73.8ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 497ms (Views: 471.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:44:46 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (93.7ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 511ms (Views: 481.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:45:10 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (8.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (4.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (131.9ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 509ms (Views: 436.9ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:47:23 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (6.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (3.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (58.7ms)
+  [1m[36mAdmin Load (3.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 318ms (Views: 285.2ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:47:55 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (2.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (65.0ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 412ms (Views: 379.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:48:29 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (3.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (2.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (69.9ms)
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 335ms (Views: 304.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:48:58 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (96.8ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 541ms (Views: 508.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:49:10 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (9.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (72.1ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 336ms (Views: 301.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:49:37 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (4.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (54.7ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 297ms (Views: 275.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:49:58 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (169.8ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 406ms (Views: 385.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:50:20 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (57.0ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 337ms (Views: 314.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:52:28 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (52.0ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 295ms (Views: 271.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 16:52:37 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (10.4ms)
+  [1m[36mAdmin Load (0.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 202ms (Views: 186.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-19 16:52:47 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (4.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPost Load (1.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (72.2ms)
+Completed 200 OK in 351ms (Views: 312.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:52:49 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (3.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (14.4ms)
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 201ms (Views: 178.6ms | ActiveRecord: 4.6ms)
+
+
+Started DELETE "/admin/sign_out" for 127.0.0.1 at 2017-06-19 16:53:28 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XF/aYMIh+f8vBUlo1Gl0Tl8/UTModKny0Xj6Gh3YdQkwLiKYnQyLtt35FUQw4ZpfUvBWpH9BgX1z5Stvn1R1ug=="}
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:53:28 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 148ms (Views: 143.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:55:26 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (88.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (333.2ms)
+Completed 200 OK in 1176ms (Views: 1044.9ms | ActiveRecord: 89.2ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 16:56:43 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 302ms (Views: 286.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:56:44 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (6.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (63.2ms)
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 16:56:45 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (6.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 1337ms (Views: 1252.3ms | ActiveRecord: 7.1ms)
+
+
+Completed 200 OK in 404ms (Views: 348.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-06-19 16:56:47 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 191ms (Views: 164.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:56:49 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 155ms (Views: 147.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 16:58:34 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (3.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 3424ms (Views: 3381.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 16:58:46 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 211ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 17:00:32 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 275ms (Views: 249.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 17:00:55 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 305ms (Views: 260.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-06-19 17:01:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendered collection of /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [34 times] (116.0ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.5ms)
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (280.0ms)
+Started GET "/admin/login" for 127.0.0.1 at 2017-06-19 17:01:07 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 246ms (Views: 227.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-06-19 17:01:18 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LTnd+zxHTf6VzMhfCCaq26x5MIoEPNzDR4yQtWIJU+aQmfIL8KBJh4jTfjIaixLcOVS7P7teVWNl/lZHUv2P5Q==", "admin"=>{"email"=>"jake@jake.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "jake@jake.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE "admins" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["current_sign_in_at", "2017-06-19 21:01:18.618934"], ["last_sign_in_at", "2017-06-19 20:33:28.193657"], ["sign_in_count", 3], ["updated_at", "2017-06-19 21:01:18.624603"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 268ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 17:01:18 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (2.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (15.9ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 465ms (Views: 457.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-19 17:01:21 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (27.2ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 199ms (Views: 184.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-06-19 17:01:22 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (41.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (4.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (112.5ms)
+Completed 200 OK in 1147ms (Views: 980.7ms | ActiveRecord: 46.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-06-19 17:01:30 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (6.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 305ms (Views: 245.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-19 17:01:42 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (17.5ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 182ms (Views: 173.1ms | ActiveRecord: 3.3ms)
+
+

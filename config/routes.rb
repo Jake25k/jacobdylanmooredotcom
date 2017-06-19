@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   # For wysiwyg editor for blog and projects
-  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
 
   get 'static/pages'
 
