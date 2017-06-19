@@ -1,19 +1,20 @@
 .parallax-text{
   font-size: 5.6rem;
   color: white;
-  padding-top: 125px;
+  vertical-align: middle;
+  line-height: 375px;
   text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 .long-parallax-text{
   font-size: 2.6rem;
   color: white;
-  padding-top: 125px;
+  vertical-align: middle;
+  line-height: 325px;
   text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 
 .parallax1 {
   background-image: url("aboutphoto1.jpg");
-  display: none;
 
   height: 375px;
 

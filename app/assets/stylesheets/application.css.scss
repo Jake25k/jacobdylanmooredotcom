@@ -3,8 +3,8 @@
 @import "homepage";
 @import "static";
 @import "projects";
-@import "posts";
 @import "bootsy";
+@import "posts";
 
 
 /* universal css */
@@ -28,10 +28,10 @@ footer{
 }
 
 ::selection {
-  background: darkgrey;
+  background: lightpink;
 }
 ::-moz-selection { /* Code for Firefox */
-  background: darkgrey;
+  background: lightpink;
 }
 
 .wrapper {
@@ -85,6 +85,22 @@ footer{
   padding-bottom: 45px;
 }
 
+.remove-table-margin-bottom{
+  margin-bottom: 0px;
+}
+
+.homepage-table-panels{
+  overflow-y:scroll;
+  height: 130px;
+}
+
+.panel-fix-buttons{
+  margin-top: -50px;
+}
+
+.fix-bootsy{
+  background-image: none;
+}
 
 /* bootstrap edits */
 
@@ -124,10 +140,6 @@ footer{
   :hover{
     color: white;
   }
-}
-
-.fix-bootsy{
-  background-image: none;
 }
 
 //Added in so navbar collapse happens soon for tabley devices and larger cell phones
@@ -176,4 +188,8 @@ footer{
     -webkit-box-shadow: none;
     box-shadow: none;
   }
+}
+
+.remove-panel-body-padding{
+  padding: 0px;
 }

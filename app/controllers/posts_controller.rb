@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
+
+  before_action :authenticate_admin!, except: [:show, :index]
+
   def index
     @posts = Post.all
+    @posts= @posts.paginate(:page => params[:page], :per_page => 15)
   end
 
   def new
