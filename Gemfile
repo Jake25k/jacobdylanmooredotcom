@@ -9,6 +9,7 @@ gem "binding_of_caller"
 gem 'devise'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
+gem "font-awesome-rails"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
