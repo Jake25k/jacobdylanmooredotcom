@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   # For wysiwyg editor for blog and projects
 
+  # Route for adding images
+  post '/tinymce_assets' =>   'tinymce_assets#create'
+
   get 'static/pages'
 
   # Main Page

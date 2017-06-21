@@ -11,7 +11,8 @@
             <%= f.label :description %><br>
             <%= f.text_field :description %><br>
             <%= f.label :content %><br>
-            <%= f.text_area :content, class: "" %><br>
+            <%= f.text_area :content, class: "tinymce", rows: "20" %>
+            <%= tinymce :plugins => ["wordcount", "paste", "image", "link"] %>
           </div>
 
           <br>
