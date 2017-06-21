@@ -15,10 +15,12 @@ Rails.application.routes.draw do
 
   # Projects
   get resources :projects
+  post "/projects/:id", to: 'projects#pinOrUnpinProject', as: 'pin_Or_Unpin_Project'
 
   # Blog
   get resources :posts
 
-  # Devise admin
+  # Admin routes
   devise_for :admins, path: 'admin', path_names: { sign_in: 'login' }
+
 end

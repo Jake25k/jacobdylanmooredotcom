@@ -14,13 +14,19 @@
     <% end %>
     <div>
       <table class="table table-striped">
-        <th> Project Name:</th>
-        <th> Description: </th>
-        <%-@projects.order("created_at DESC").each do |project| %>
-            <tr>
-              <td> <%=link_to project.title, project_path(project.id) %> </td>
-              <td> <%=project.description %> </td>
-            </tr>
+        <%-if @projects.any? %>
+          <th> Project Name:</th>
+          <th> Description: </th>
+          <%-@projects.order("created_at DESC").each do |project| %>
+              <tr>
+                <td> <%=link_to project.title, project_path(project.id) %> </td>
+                <td> <%=project.description %> </td>
+              </tr>
+          <% end %>
+        <%-else %>
+          <div class="center">
+            Currently no content.
+          </div>
         <% end %>
         <div class="center">
           <%= will_paginate @projects %>

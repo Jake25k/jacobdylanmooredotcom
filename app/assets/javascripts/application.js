@@ -5,12 +5,14 @@
 //= require homepage
 //= require static
 //= require projects
-//= require tinymce-jquery
+//= require tinymce
 //= require_tree .
+
+
 
 tinymce.init({
     selector: 'textarea',
-    toolbar: "bold italic underline bullist numlist outdent indent undo redo pastetext pasteword selectall uploadimage",
-    plugins: 'wordcount paste image link media uploadimage',
+    toolbar: "undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage",
+    plugins: 'wordcount paste image link media uploadimage autosave',
     file_picker_types: 'image media'
 });
