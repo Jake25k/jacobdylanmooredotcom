@@ -9,7 +9,7 @@
         </div>
         <div class="panel">
           <div class="panel-heading center">
-            NASA Intern &#9679; Software Engineer &#9679; Student
+            NASA Intern &#9679; Software Engineer &#9679; Computer Scientist &#9679; Student
           </div>
         </div>
       </div>
@@ -28,11 +28,15 @@
               </div>
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
                 <table class="table table-striped remove-table-margin-bottom">
-                  <%- @projects.each do |project| %>
-                    <tr>
-                      <th> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
-                      <td> <%=truncate(project.description, length: 15) %> </td>
-                    </tr>
+                  <%- if @projects.any? %>
+                    <%- @projects.each do |project| %>
+                      <tr>
+                        <th> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
+                        <td> <%=truncate(project.description, length: 15) %> </td>
+                      </tr>
+                    <% end %>
+                  <% else %>
+                    Currently no content.
                   <% end %>
                 </table>
               </div>
@@ -46,11 +50,15 @@
               </div>
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
                 <table class="table table-striped remove-table-margin-bottom">
-                  <%- @posts.each do |post| %>
-                    <tr>
-                      <th> <%=link_to truncate(post.title, length: 25), post_path(post.id) %> </th>
-                      <td> <%=truncate(post.content, length: 15) %></td>
-                    </tr>
+                  <%- if @projects.any? %>
+                    <%- @posts.each do |post| %>
+                      <tr>
+                        <th> <%=link_to truncate(post.title, length: 25), post_path(post.id) %> </th>
+                        <td> <%=truncate(post.content, length: 15) %></td>
+                      </tr>
+                    <% end %>
+                  <% else %>
+                    Currently no content.
                   <% end %>
                 </table>
               </div>
