@@ -13,6 +13,7 @@ gem "font-awesome-rails"
 gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', ' ~> 4.0.0.beta'
 gem 'paperclip'
+gem 'json'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
