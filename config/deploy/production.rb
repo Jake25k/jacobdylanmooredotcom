@@ -23,7 +23,7 @@
 role :app, %w{deploy@198.199.89.171}
 role :web, %w{deploy@198.199.89.171}
 role :db,  %w{deploy@198.199.89.171}, :primay => true
-set :branch, "master"
+set :branch, "production"
 set :rails_env, "production"
 set :deploy_to, "/var/www/jacob_dylan_moore_production"
 
