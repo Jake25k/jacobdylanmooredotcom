@@ -23,11 +23,7 @@ test:
 staging:
   <<: *default
   database: jacob_dylan_moore_staging
-  username: deploy
-  password: <%= ENV["DATABASE_PASSWORD"] %>
 
 production:
   <<: *default
   database: db/jacob_dylan_moore_production
-  username: deploy
-  password: <%= ENV["DATABASE_PASSWORD"] %>
