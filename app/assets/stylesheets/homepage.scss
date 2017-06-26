@@ -25,7 +25,7 @@ a.social-media-icon{
 }
 
 .parallax-homepage{
-  background-image: url("leadingphoto.jpg");
+  background-image: asset_url('leadingphoto.jpg');
   display: none;
 
   height: 400px;
