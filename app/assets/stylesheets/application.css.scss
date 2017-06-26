@@ -9,10 +9,10 @@
 
 /* universal css */
 body{
-  background: asset-url("assets/bg.jpg") center center fixed;
+  background: asset_url('bg.jpg') center center fixed;
   background-color: lightgrey;
   background-size: cover;
-  min-width: 600px;
+  min-width: 300px;
 }
 
 footer{
