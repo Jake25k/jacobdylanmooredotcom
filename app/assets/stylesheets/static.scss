@@ -14,7 +14,7 @@
 }
 
 .parallax1 {
-  background-image: url("aboutphoto1.jpg");
+  background-image: asset_url('aboutphoto1.jpg');
 
   height: 375px;
 
@@ -28,7 +28,7 @@
 }
 
 .parallax2 {
-  background-image: url("aboutphoto2.jpg");
+  background-image: asset_url('aboutphoto2.jpg');
 
   height: 325px;
 
