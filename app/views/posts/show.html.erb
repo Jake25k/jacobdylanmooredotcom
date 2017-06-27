@@ -4,7 +4,6 @@
       <h1>
         <%= @post.title %>
       </h1>
-      <div>
         <div class="float-right panel-fix-buttons">
           <%=link_to "Back", posts_path, class:"btn btn-primary" %>
           <%- if current_admin %>
@@ -13,9 +12,14 @@
           <% end %>
         </div>
       </div>
-    </div>
     <div class="panel-body">
-      <%= (@post.content).html_safe %>
+      <b> Published on: <%= @post.created_at.strftime("%D") %> </b> <br>
+      <%-if @post.updated_at != @post.created_at %>
+          <b> Edited on <%= @post.updated_at.strftime("%D") %> </b>
+      <% end %>
+      <div class="margin-top">
+        <%= (@post.content).html_safe%>
+      </div>
     </div>
   </div>
 </div>
