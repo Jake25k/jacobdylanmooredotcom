@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d6d7828-eab3-4a80-92a2-a5955567c742" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/posts/show.html.erb" afterPath="$PROJECT_DIR$/app/views/posts/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/homepage/home.html.erb" afterPath="$PROJECT_DIR$/app/views/homepage/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="jacobdylanmooredotcom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="posts.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="posts.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -75,6 +74,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/homepage/home.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -142,13 +151,13 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/homepage.scss" />
         <option value="$PROJECT_DIR$/config/environments/staging.rb" />
-        <option value="$PROJECT_DIR$/app/views/homepage/home.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/static.scss" />
         <option value="$PROJECT_DIR$/app/views/static/about.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/projects.scss" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" />
+        <option value="$PROJECT_DIR$/app/views/homepage/home.html.erb" />
       </list>
     </option>
   </component>
@@ -246,7 +255,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="posts" />
+              <option name="myItemId" value="homepage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -533,12 +542,12 @@
       <workItem from="1497270137889" duration="152000" />
       <workItem from="1497277394921" duration="14393000" />
       <workItem from="1497356621461" duration="67095000" />
-      <workItem from="1498333515385" duration="10282000" />
+      <workItem from="1498333515385" duration="10371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108286000" />
+    <option name="totallyTimeSpent" value="108375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="78" width="1179" height="536" extended-state="0" />
@@ -882,18 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/homepage/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding>
-            <element signature="e#393#400#0#HTML" expanded="true" />
-            <element signature="e#419#426#0#HTML" expanded="true" />
-            <element signature="e#446#453#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -934,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
@@ -954,6 +943,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/homepage/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="31" column="53" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
           <folding />
         </state>
       </provider>

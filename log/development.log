@@ -47121,3 +47121,54 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 3212ms (Views: 3203.6ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/posts" for 127.0.0.1 at 2017-06-27 15:41:34 -0400
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 136ms (Views: 127.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-06-27 15:41:37 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 109ms (Views: 94.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 15:41:40 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" WHERE "projects"."pinned_project" = $1 LIMIT $2) subquery_for_count[0m  [["pinned_project", "t"], ["LIMIT", 5]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (11.4ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 104.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-06-27 15:41:43 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (4.5ms)
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 85.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 15:42:40 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" WHERE "projects"."pinned_project" = $1 LIMIT $2) subquery_for_count[0m  [["pinned_project", "t"], ["LIMIT", 5]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  [1m[36mPost Load (1.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (82.0ms)
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 390ms (Views: 349.0ms | ActiveRecord: 8.0ms)
+
+
