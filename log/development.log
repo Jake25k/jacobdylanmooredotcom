@@ -47172,3 +47172,25 @@ Processing by HomepageController#home as HTML
 Completed 200 OK in 390ms (Views: 349.0ms | ActiveRecord: 8.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-27 20:32:56 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (54.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" WHERE "projects"."pinned_project" = $1 LIMIT $2) subquery_for_count[0m  [["pinned_project", "t"], ["LIMIT", 5]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  [1m[36mPost Load (9.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (468.1ms)
+  [1m[36mAdmin Load (2.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1062ms (Views: 869.7ms | ActiveRecord: 67.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-27 20:33:17 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (35.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" WHERE "projects"."pinned_project" = $1 LIMIT $2) subquery_for_count[0m  [["pinned_project", "t"], ["LIMIT", 5]]
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  [1m[36mPost Load (8.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (143.3ms)
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 840ms (Views: 741.0ms | ActiveRecord: 50.0ms)
+
+
