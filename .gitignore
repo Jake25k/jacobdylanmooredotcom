@@ -2,4 +2,6 @@
 /db/*.sqlite3
 /log/*.log
 tmp
-.idea
+/.idea
+/config/secrets.yml
+/config/initializers/devise.rb
