@@ -5,4 +5,3 @@ tmp
 /.idea
 /config/secrets.yml
 /config/initializers/devise.rb
-/config/routes.rb
