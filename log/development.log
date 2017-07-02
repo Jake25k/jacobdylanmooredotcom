@@ -47216,3 +47216,269 @@ Processing by HomepageController#home as HTML
 Completed 200 OK in 1456ms (Views: 1405.3ms | ActiveRecord: 23.8ms)
 
 
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
+Started GET "/" for 127.0.0.1 at 2017-07-02 12:15:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.9ms)
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.3ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (108.3ms)
+Started GET "/" for 127.0.0.1 at 2017-07-02 12:15:24 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.5ms)
+Started GET "/" for 127.0.0.1 at 2017-07-02 12:16:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.8ms)
+Started GET "/" for 127.0.0.1 at 2017-07-02 12:16:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `call'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.5ms)
+Started GET "/" for 127.0.0.1 at 2017-07-02 12:17:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "projects" WHERE "projects"."pinned_project" = $1 LIMIT $2) subquery_for_count[0m  [["pinned_project", "t"], ["LIMIT", 5]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  [1m[36mPost Load (4.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (1077.1ms)
+Completed 200 OK in 1368ms (Views: 1313.6ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:17:28 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:18:07 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 362ms (Views: 353.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:18:12 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 128ms (Views: 124.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:18:21 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 107ms (Views: 102.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:18:35 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 97ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:18:43 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 116ms (Views: 113.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:19:04 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 149ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:19:52 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 149ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:20:09 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 132ms (Views: 127.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:21:01 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 3144ms (Views: 3140.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:21:25 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 2875ms (Views: 2871.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:21:46 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2581ms (Views: 2578.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:22:17 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 195ms (Views: 191.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-07-02 12:22:42 -0400
+Processing by StaticController#about as HTML
+  Rendering static/about.html.erb within layouts/application
+  Rendered static/about.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 3160ms (Views: 3155.7ms | ActiveRecord: 0.0ms)
+
+
