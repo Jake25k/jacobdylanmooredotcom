@@ -47216,6 +47216,7 @@ Processing by HomepageController#home as HTML
 Completed 200 OK in 1456ms (Views: 1405.3ms | ActiveRecord: 23.8ms)
 
 
+<<<<<<< HEAD
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
 DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /Users/jakemoore/.rvm/gems/ruby-2.2.2/gems/railties-5.0.4/lib/rails/application.rb:246)
@@ -47482,3 +47483,5 @@ Processing by StaticController#about as HTML
 Completed 200 OK in 3160ms (Views: 3155.7ms | ActiveRecord: 0.0ms)
 
 
+=======
+>>>>>>> 532555ac38fafb232c02de42f4756e32eae1f830
