@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
-    @projects = @projects.paginate(:page => params[:page], :per_page => 2)
+    @projects = @projects.paginate(:page => params[:page], :per_page => 15)
   end
 
   def new
@@ -63,7 +63,6 @@ class ProjectsController < ApplicationController
 
   def getProjectTypePartial
     projectList = Project.where(project_type: params[:project_type])
-    # projectList = Project.all if projectList.empty?
 
     render partial: '/projects/projectType', locals: {projects: projectList}
   end
