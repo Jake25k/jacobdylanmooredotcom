@@ -1,10 +1,10 @@
 class ProjectsController < ApplicationController
 
-  before_action :authenticate_admin!, except: [:show, :index]
+  before_action :authenticate_admin!, except: [:show, :index, :getProjectTypePartial]
 
   def index
     @projects = Project.all
-    @projects = @projects.paginate(:page => params[:page], :per_page => 15)
+    @projects = @projects.paginate(:page => params[:page], :per_page => 2)
   end
 
   def new
@@ -13,6 +13,7 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.project_type = (@project.project_type.downcase)
     if @project.save
       redirect_to project_path(@project)
       flash.now[:notice] = "Your project was posted!"
@@ -56,9 +57,20 @@ class ProjectsController < ApplicationController
     redirect_to project_path(project)
   end
 
+  def getProjectTypesAsJson
+    render json: Project.all.map(&:project_type).uniq
+  end
+
+  def getProjectTypePartial
+    projectList = Project.where(project_type: params[:project_type])
+    # projectList = Project.all if projectList.empty?
+
+    render partial: '/projects/projectType', locals: {projects: projectList}
+  end
+
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :content, :pinned_project)
+    params.require(:project).permit(:title, :description, :content, :pinned_project, :project_type)
   end
 end

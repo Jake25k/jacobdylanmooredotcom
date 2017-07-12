@@ -1,5 +1,6 @@
 class TinymceAssetsController < ApplicationController
   respond_to :json
+  before_action :authenticate_admin!
 
   def create
     geometry = Paperclip::Geometry.from_file params[:file]

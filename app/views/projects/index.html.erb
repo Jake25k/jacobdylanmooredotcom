@@ -12,26 +12,41 @@
         <%=link_to "New Project", new_project_path, class:"btn btn-primary" %>
       </div>
     <% end %>
-    <div>
-      <table class="table table-striped">
+      <center>
+        <h4>
+          Select a type:
+          <select id="selector">
+            <option value="nil"></option>
+            <%-Project.all.map(&:project_type).uniq.each do |p|%>
+              <option value=<%=p%>> <%= p %></option>
+            <% end %>
+          </select>
+        </h4>
+      </center>
+
+    <div class="tableToDissapear">
+      <table class="table table-striped ">
         <%-if @projects.any? %>
-          <th> Project Name:</th>
-          <th> Description: </th>
-          <%-@projects.order("created_at DESC").each do |project| %>
-              <tr>
-                <td> <%=link_to project.title, project_path(project.id) %> </td>
-                <td> <%=project.description %> </td>
-              </tr>
-          <% end %>
+            <th> Project Name:</th>
+            <th> Description: </th>
+            <%-@projects.order("created_at DESC").each do |project| %>
+                <tr>
+                  <td> <%=link_to project.title, project_path(project.id) %> </td>
+                  <td> <%=project.description %> </td>
+                </tr>
+            <% end %>
         <%-else %>
-          <div class="center">
-            Currently no content.
-          </div>
+            <div class="center">
+              Currently no content.
+            </div>
         <% end %>
-        <div class="center">
-          <%= will_paginate @projects %>
-        </div>
       </table>
     </div>
+    <% #rendered partial appears here %>
+    <div id="renderedTable">
+    </div>
+    <center class="tableToDissapear">
+      <%= will_paginate @projects, renderer: BootstrapPagination::Rails %>
+    </center>
   </div>
 </div>

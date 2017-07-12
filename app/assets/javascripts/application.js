@@ -6,7 +6,7 @@
 //= require static
 //= require projects
 //= require tinymce
-//= require_tree .
+//= require autocomplete
 
 
 

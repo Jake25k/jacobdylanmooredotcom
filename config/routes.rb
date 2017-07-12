@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For wysiwyg editor for blog and projects
 
   # Route for adding images
-  post '/tinymce_assets' =>   'tinymce_assets#create'
+  post '/tinymce_assets', to:   'tinymce_assets#create'
 
   get 'static/pages'
 
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   # Projects
   get resources :projects
   post "/projects/:id", to: 'projects#pinOrUnpinProject', as: 'pin_Or_Unpin_Project'
+  get '/projects/new/project_types', to: 'projects#getProjectTypesAsJson'
+  post 'projects/render/chosenProjects', to: 'projects#getProjectTypePartial'
 
   # Blog
   get resources :posts

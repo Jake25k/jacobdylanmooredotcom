@@ -8,12 +8,14 @@ gem 'better_errors'
 gem "binding_of_caller"
 gem 'devise'
 gem 'simple_form'
-gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 gem "font-awesome-rails"
 gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', ' ~> 4.0.0.beta'
 gem 'paperclip'
 gem 'json'
+gem 'jquery-ui-rails'
+gem 'active_model_serializers', '0.9.4'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
@@ -58,6 +60,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-passenger'
+  gem 'capistrano-figaro-yml'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
