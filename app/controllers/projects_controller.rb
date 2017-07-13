@@ -14,6 +14,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.project_type = (@project.project_type.downcase)
+
     if @project.save
       redirect_to project_path(@project)
       flash.now[:notice] = "Your project was posted!"
@@ -62,7 +63,7 @@ class ProjectsController < ApplicationController
   end
 
   def getProjectTypePartial
-    projectList = Project.where(project_type: params[:project_type])
+    projectList = Project.where(project_type: params[:project_type].gsub('_',' '))
 
     render partial: '/projects/projectType', locals: {projects: projectList}
   end

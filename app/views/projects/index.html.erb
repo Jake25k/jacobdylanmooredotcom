@@ -12,17 +12,19 @@
         <%=link_to "New Project", new_project_path, class:"btn btn-primary" %>
       </div>
     <% end %>
-      <center>
-        <h4>
-          Select a type:
-          <select id="selector">
-            <option value="nil"></option>
-            <%-Project.all.map(&:project_type).uniq.each do |p|%>
-              <option value=<%=p%>> <%= p %></option>
-            <% end %>
-          </select>
-        </h4>
-      </center>
+      <%-if @projects.any? %>
+        <center>
+          <h4>
+            Select a type:
+            <select id="selector">
+              <option value="nil">All</option>
+              <%-Project.all.map(&:project_type).uniq.each do |p|%>
+                <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
+              <% end %>
+            </select>
+          </h4>
+        </center>
+      <%end %>
 
     <div class="tableToDissapear">
       <table class="table table-striped ">

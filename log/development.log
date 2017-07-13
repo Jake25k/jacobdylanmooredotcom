@@ -52639,3 +52639,649 @@ Processing by HomepageController#home as HTML
 Completed 200 OK in 167ms (Views: 158.7ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-12 16:04:22 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."pinned_project" = $1[0m  [["pinned_project", "t"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (17.7ms)
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 321ms (Views: 282.7ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:40:12 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (4.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 1538ms (Views: 1494.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:40:13 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 134ms (Views: 128.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:42:59 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 281ms (Views: 253.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-07-12 16:43:17 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (184.9ms)
+Completed 200 OK in 446ms (Views: 362.4ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-07-12 16:43:26 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rVqW5CLTUyFv/wySE5bTeEe8XOLKbFYzO+q5J5nwCwm7Z8f7KC8GfwUALK3Yn9F3vuBUWpbONDIjUAQnpSAEMA==", "project"=>{"title"=>"nfjensf", "description"=>"dsdsfsdf", "project_type"=>"cdsvvsd", "content"=>"<p>sdvvvs</p>"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (3.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.5ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description", "project_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "nfjensf"], ["content", "<p>sdvvvs</p>"], ["created_at", "2017-07-12 20:43:26.832985"], ["updated_at", "2017-07-12 20:43:26.832985"], ["description", "dsdsfsdf"], ["project_type", "cdsvvsd"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects/1
+Completed 302 Found in 37ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-07-12 16:43:26 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 151ms (Views: 133.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:43:28 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 123ms (Views: 113.9ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:43:34 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"cdsvvsd"}
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "cdsvvsd"]]
+  Rendered projects/_projectType.html.erb (27.7ms)
+Completed 200 OK in 107ms (Views: 73.5ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-07-12 16:43:39 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 226ms (Views: 206.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-07-12 16:43:49 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VB9HgWryQ1HymJ5mEjykCvC/vjmZweDTA9PeLid/Kz7bSwBD1ecUy01QkZTQfCf0p72QLrFZYJUtfJ4hE3zlQ==", "project"=>{"title"=>"sdcdscc", "description"=>"sdcsc", "project_type"=>"sdcdsc", "content"=>"<p>sdcdsc</p>"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description", "project_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sdcdscc"], ["content", "<p>sdcdsc</p>"], ["created_at", "2017-07-12 20:43:49.215825"], ["updated_at", "2017-07-12 20:43:49.215825"], ["description", "sdcsc"], ["project_type", "sdcdsc"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 30ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2017-07-12 16:43:49 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 263ms (Views: 257.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:43:51 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 192ms (Views: 183.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2017-07-12 16:43:57 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 185ms (Views: 173.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2017-07-12 16:43:58 -0400
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAdmin Load (1.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 161ms (Views: 149.9ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/projects/2" for 127.0.0.1 at 2017-07-12 16:44:01 -0400
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xPdZmkhA7jzgY4ocp+2mJK3wU2Z6s9bzyRsRerrI7qLEEgXEva24EkfL/7ixlzrp1SNcNS+Ulxw1SF5q6nom/Q==", "project"=>{"title"=>"sdcdscc", "description"=>"sdcsc", "project_type"=>"dsdsfsdf", "content"=>"<p>sdcdsc</p>"}, "commit"=>"Submit", "id"=>"2"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[33mUPDATE "projects" SET "project_type" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["project_type", "dsdsfsdf"], ["updated_at", "2017-07-12 20:44:01.279368"], ["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects/2
+Completed 302 Found in 17ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2017-07-12 16:44:01 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 88ms (Views: 84.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:44:02 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 139ms (Views: 130.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-07-12 16:44:04 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (3.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 146ms (Views: 132.1ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-07-12 16:44:10 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sH0NjOLNHNKC1SXy1CcRJ8Duwfw0HElZsN6bi/sGwbGmQFyT6DFJjOgqBc0fLhMoObLJRGi+K1ioZCaLx9bOiA==", "project"=>{"title"=>"sd", "description"=>"sfdfsd", "project_type"=>"dsdsfsdf", "content"=>"<p>sdffs</p>"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description", "project_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sd"], ["content", "<p>sdffs</p>"], ["created_at", "2017-07-12 20:44:10.098212"], ["updated_at", "2017-07-12 20:44:10.098212"], ["description", "sfdfsd"], ["project_type", "dsdsfsdf"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects/3
+Completed 302 Found in 12ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-07-12 16:44:10 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 96ms (Views: 91.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:44:11 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 95ms (Views: 88.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:44:16 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"dsdsfsdf"}
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "dsdsfsdf"]]
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "dsdsfsdf"]]
+  Rendered projects/_projectType.html.erb (10.4ms)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:44:21 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"cdsvvsd"}
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "cdsvvsd"]]
+  Rendered projects/_projectType.html.erb (7.3ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:44:30 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (4.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 319ms (Views: 294.2ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 16:44:33 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."pinned_project" = $1[0m  [["pinned_project", "t"]]
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (12.7ms)
+  [1m[36mAdmin Load (1.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 146ms (Views: 129.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:44:34 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 128ms (Views: 120.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-12 16:44:36 -0400
+Processing by HomepageController#home as HTML
+  Rendering homepage/home.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."pinned_project" = $1[0m  [["pinned_project", "t"]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT $1) subquery_for_count[0m  [["LIMIT", 10]]
+  Rendered homepage/home.html.erb within layouts/application (15.8ms)
+  [1m[36mAdmin Load (1.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 143ms (Views: 134.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:44:40 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (2.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 125ms (Views: 115.5ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:44:43 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"dsdsfsdf"}
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "dsdsfsdf"]]
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "dsdsfsdf"]]
+  Rendered projects/_projectType.html.erb (7.5ms)
+Completed 200 OK in 26ms (Views: 19.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-07-12 16:48:19 -0400
+Processing by ProjectsController#new as HTML
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 545ms (Views: 505.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-07-12 16:48:29 -0400
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wF/9OuaOzem1wbsCZ2jk2D+s7Qyeo5yrkRM0yBqRWSfWYqwl7HKYt98+mz2sYebXxvDltMIB/qqJqYnIJkFWHg==", "project"=>{"title"=>"sdsdsvs", "description"=>"vsdvsv", "project_type"=>"multiple words", "content"=>"<p>dvvdfvd</p>"}, "commit"=>"Submit"}
+  [1m[36mAdmin Load (1.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "projects" ("title", "content", "created_at", "updated_at", "description", "project_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "sdsdsvs"], ["content", "<p>dvvdfvd</p>"], ["created_at", "2017-07-12 20:48:29.532347"], ["updated_at", "2017-07-12 20:48:29.532347"], ["description", "vsdvsv"], ["project_type", "multiple words"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects/4
+Completed 302 Found in 15ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2017-07-12 16:48:29 -0400
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mAdmin Load (1.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 150ms (Views: 143.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:48:31 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 105ms (Views: 96.5ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:48:34 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (4.6ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:49:18 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"dsdsfsdf"}
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "dsdsfsdf"]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "dsdsfsdf"]]
+  Rendered projects/_projectType.html.erb (16.8ms)
+Completed 200 OK in 28524ms (Views: 31.9ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:49:51 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:50:39 -0400
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (40.1ms)
+Completed 200 OK in 48508ms (Views: 79.3ms | ActiveRecord: 10.0ms)
+
+
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (126.2ms)
+Completed 200 OK in 1261ms (Views: 1217.6ms | ActiveRecord: 31.5ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:50:46 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (17.8ms)
+Completed 200 OK in 70324ms (Views: 59.9ms | ActiveRecord: 1.7ms)
+
+
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:53:48 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (2.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (48.9ms)
+Completed 200 OK in 1394ms (Views: 1372.8ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:54:06 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 372ms (Views: 343.0ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:54:12 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:54:42 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:54:42 -0400
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:54:42 -0400
+  Rendered projects/_projectType.html.erb (6.6ms)
+Processing by ProjectsController#getProjectTypePartial as */*
+Completed 200 OK in 29805ms (Views: 30.2ms | ActiveRecord: 1.8ms)
+
+
+Processing by ProjectsController#getProjectTypePartial as */*
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"cdsvvsd"}
+  Parameters: {"project_type"=>"cdsvvsd"}
+  Parameters: {"project_type"=>"dsdsfsdf"}
+  [1m[35m (1840.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[36mProject Load (9.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "cdsvvsd"]]
+  Rendered projects/_projectType.html.erb (6.6ms)
+Completed 401 Unauthorized in 7104ms (ActiveRecord: 0.0ms)
+
+
+  Rendered projects/_projectType.html.erb (8947.5ms)
+Completed 401 Unauthorized in 8945ms (ActiveRecord: 4.5ms)
+
+
+Completed 401 Unauthorized in 17807ms (ActiveRecord: 1850.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-12 16:55:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 2704ms (Views: 2667.0ms | ActiveRecord: 17.5ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:55:42 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"cdsvvsd"}
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "cdsvvsd"]]
+  Rendered projects/_projectType.html.erb (7.8ms)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-12 16:55:45 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (3.6ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 08:21:24 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (27.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (78.2ms)
+Completed 200 OK in 175ms (Views: 97.8ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 08:48:12 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (28.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (3.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (155.6ms)
+Completed 200 OK in 931ms (Views: 795.0ms | ActiveRecord: 34.0ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 08:48:16 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"cdsvvsd"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "cdsvvsd"]]
+  Rendered projects/_projectType.html.erb (7.0ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 08:48:21 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (9.5ms)
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 08:49:19 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (2.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 494ms (Views: 462.4ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 08:49:23 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (4.6ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 08:52:10 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (3.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (139.0ms)
+Completed 200 OK in 997ms (Views: 946.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 08:52:16 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (11.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 304ms (Views: 266.1ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 08:52:21 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (2.9ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (5.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 237ms (Views: 224.5ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 09:18:55 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (22.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (3.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 384ms (Views: 324.5ms | ActiveRecord: 30.1ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 09:19:00 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"cdsvvsd"}
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "cdsvvsd"]]
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "cdsvvsd"]]
+  Rendered projects/_projectType.html.erb (14.6ms)
+Completed 200 OK in 56ms (Views: 48.7ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 09:19:04 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple"]]
+  Rendered projects/_projectType.html.erb (3.9ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-07-13 09:23:05 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" ORDER BY created_at DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (150.7ms)
+Completed 200 OK in 360ms (Views: 252.1ms | ActiveRecord: 88.7ms)
+
+
+Started POST "/projects/render/chosenProjects" for 127.0.0.1 at 2017-07-13 09:23:09 -0400
+Processing by ProjectsController#getProjectTypePartial as */*
+  Parameters: {"project_type"=>"multiple_words"}
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "projects" WHERE "projects"."project_type" = $1[0m  [["project_type", "multiple words"]]
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."project_type" = $1 ORDER BY created_at DESC[0m  [["project_type", "multiple words"]]
+  Rendered projects/_projectType.html.erb (11.8ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 2.2ms)
+
+
