@@ -1,6 +1,20 @@
+selector:
+  - textarea
+
+browser_spellcheck:
+  - true
+
 toolbar:
   - undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage
+
 plugins:
   - image
   - link
   - uploadimage
+  - wordcount
+  - paste
+  - media
+
+file_picker_types:
+  - image
+  - media

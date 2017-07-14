@@ -9,10 +9,13 @@
 //= require autocomplete
 
 
-
-tinymce.init({
-    selector: 'textarea',
-    toolbar: "undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage",
-    plugins: 'wordcount paste image link media uploadimage autosave',
-    file_picker_types: 'image media'
+$(document).on('turbolinks:load', function() {
+    tinymce.init({
+        selector: 'textarea',
+        browser_spellcheck: true,
+        toolbar: "undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage",
+        plugins: 'wordcount paste image link media uploadimage',
+        content_style: ".mce-content-body {font-size:15px;font-family:Calibri}",
+        file_picker_types: 'image media'
+    });
 });
