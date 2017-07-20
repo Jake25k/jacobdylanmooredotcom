@@ -19,4 +19,14 @@
 
 .project-content{
   font-size: 17px;
+
+}
+
+@media (max-width: 900px){
+  .project-content{
+    img{
+      max-width: 250px;
+      max-height: 275px;
+    }
+  }
 }

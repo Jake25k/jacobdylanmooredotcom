@@ -14,6 +14,7 @@ plugins:
   - wordcount
   - paste
   - media
+  - autoresize
 
 file_picker_types:
   - image

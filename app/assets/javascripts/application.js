@@ -14,8 +14,7 @@ $(document).on('turbolinks:load', function() {
         selector: 'textarea',
         browser_spellcheck: true,
         toolbar: "undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage",
-        plugins: 'wordcount paste image link media uploadimage',
-        content_style: ".mce-content-body {font-size:15px;font-family:Calibri}",
+        plugins: "wordcount paste image link media uploadimage autoresize",
         file_picker_types: 'image media'
     });
 });

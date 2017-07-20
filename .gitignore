@@ -4,3 +4,4 @@
 tmp
 /config/initializers/devise.rb
 /config/application.yml
+/public/system/images
