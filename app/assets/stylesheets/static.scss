@@ -38,6 +38,17 @@
   background-size: cover;
 }
 
+@media (min-width: 1200px) {
+  .parallax1 {
+    background-attachment: fixed;
+    zoom: 120%;
+  }
+  .parallax2 {
+    background-attachment: fixed;
+    zoom: 120%;
+  }
+}
+
 .aboutembededphoto{
   height: 220px;
   width: auto;

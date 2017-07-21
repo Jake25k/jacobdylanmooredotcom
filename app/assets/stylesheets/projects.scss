@@ -2,14 +2,18 @@
   background-image: asset_url('projectsphoto.jpg');
 
   height: 375px;
-
-  //background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   //reversing bootstraps margin for the navbar
   margin-top: -20px;
+}
+
+@media (min-width: 1200px) {
+  .parallax-projects {
+    background-attachment: fixed;
+  }
 }
 
 .back-to-projects-button{

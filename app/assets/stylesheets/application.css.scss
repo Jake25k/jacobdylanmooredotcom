@@ -49,9 +49,9 @@ footer{
   text-align: right;
 }
 
-//.float-right{
-//  float: right;
-//}
+.float-right{
+  float: right;
+}
 .fixed-right{
   fixed: right;
 }
@@ -137,7 +137,7 @@ footer{
   }
 }
 
-//Added in so navbar collapse happens soon for tabley devices and larger cell phones
+//Added in so navbar collapse happens soon for tablet devices and larger cell phones
 @media (max-width: 1200px) {
   .navbar-header {
     float: none;
