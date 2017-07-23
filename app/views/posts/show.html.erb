@@ -19,6 +19,9 @@
       <% end %>
       <div class="margin-top posts-content">
         <%= (@post.content).html_safe%>
+        <%-if current_admin %>
+            <%= link_to "Share on Facebook", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&amp;caption=An%20example%20caption&link=#{request.original_url}&redirect_uri=https://developers.facebook.com/tools/explorer", target: :_blank%>
+        <%end%>
       </div>
     </div>
   </div>
