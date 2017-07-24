@@ -25,15 +25,17 @@
   font-size: 17px;
 }
 
-.project_title{
-  word-break: break-all;
+@media (max-width: 900px) {
+  .title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 900px){
   .project-content{
     img{
-      max-width: 350px;
-      max-height: 325px;
+      max-width: 300px;
+      max-height: 225px;
     }
   }
 }
