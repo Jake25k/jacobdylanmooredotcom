@@ -36,11 +36,11 @@
         <h4 class="modal-title center" id="myModalLabel">Share Information:</h4>
       </div>
       <div class="modal-body">
-        <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=#{request.original_url}", class: "btn btn-primary center"%>
+        <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=#{request.original_url}", target: "_blank", class: "btn btn-primary center"%>
         <br><br>
         <%= "Copy this text:"%>
         <h3>
-          <%= "Jake Moore just made a new blog post! View it here: #{request.original_url}" %>
+          <%= "Jake Moore just made a new blog post titled '#{@post.title}'. View it here! #{request.original_url}" %>
         </h3>
       </div>
     </div>
