@@ -30,7 +30,7 @@ footer{
 
 @media (max-width: 800px) {
   .wrapper {
-    width: 95%;
+    width: 95% !important;
     margin: auto;
   }
   .for-mobile-about-image{
