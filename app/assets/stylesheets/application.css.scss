@@ -26,6 +26,13 @@ footer{
   }
 }
 
+@media (max-width: 1200px) {
+  .navbar {
+    min-height:80px !important;
+    font-size: 25px;
+  }
+}
+
 ::selection {
   background: lightpink;
 }
