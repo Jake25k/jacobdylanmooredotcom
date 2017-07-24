@@ -37,22 +37,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (max-width: 800px) {
-  .long-parallax-text{
-    font-size: 1.8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .parallax1 {
-    background-attachment: fixed;
-    zoom: 120%;
-  }
-  .parallax2 {
-    background-attachment: fixed;
-    zoom: 120%;
-  }
-}
 
 .aboutembededphoto{
   height: 200px;
@@ -75,4 +59,33 @@
 
 .fix-about-margin{
   margin-top: -10px;
+}
+
+.norowdisturbance{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+//Mobile support
+
+@media (max-width: 1000px){
+  .for-mobile-about-image{
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .long-parallax-text{
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .parallax1 {
+    background-attachment: fixed;
+    zoom: 120%;
+  }
+  .parallax2 {
+    background-attachment: fixed;
+    zoom: 120%;
+  }
 }

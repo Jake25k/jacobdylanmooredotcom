@@ -10,16 +10,27 @@
   margin-top: -20px;
 }
 
-@media (min-width: 1200px) {
-  .parallax-blog {
-    background-attachment: fixed;
-  }
-}
-
 .margin-top{
   margin-top: 10px;
 }
 
 .posts-content{
   font-size: 17px;
+}
+
+//Mobile support
+
+@media (min-width: 1200px) {
+  .parallax-blog {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 900px){
+  .posts-content{
+    img{
+      max-width: 275px;
+      max-height: 200px;
+    }
+  }
 }

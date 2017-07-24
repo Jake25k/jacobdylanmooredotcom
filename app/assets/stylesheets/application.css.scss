@@ -33,9 +33,6 @@ footer{
     width: 95% !important;
     margin: auto;
   }
-  .for-mobile-about-image{
-    text-align: center;
-  }
   .modal {
     top: 20%;
   }
@@ -113,11 +110,6 @@ footer{
   margin-bottom: 0px;
 }
 
-.homepage-table-panels{
-  overflow-y:scroll;
-  height: 130px;
-}
-
 .panel-fix-buttons{
   margin-top: -50px;
 }
@@ -145,15 +137,11 @@ footer{
   border-top-right-radius: 0px;
 }
 
-.norowdisturbance{
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
 .modal-header{
   background-color: #222;
   color: white;
 }
+
 .close{
   color: white;
   opacity: 1;
@@ -162,7 +150,16 @@ footer{
   }
 }
 
-//Added in so navbar collapse happens soon for tablet devices and larger cell phones
+.remove-panel-body-padding{
+  padding: 0px;
+}
+
+.accomplishmentlist {
+  list-style-type: none;
+}
+
+//Mobile support
+
 @media (max-width: 1200px) {
   .navbar-header {
     float: none;
@@ -208,12 +205,4 @@ footer{
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-}
-
-.remove-panel-body-padding{
-  padding: 0px;
-}
-
-.accomplishmentlist {
-  list-style-type: none;
 }
