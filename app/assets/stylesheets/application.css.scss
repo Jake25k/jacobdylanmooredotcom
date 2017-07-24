@@ -27,12 +27,9 @@ footer{
 }
 
 @media (max-width: 1200px) {
-  .navbar {
-    min-height:100px !important;
-    font-size: 35px;
-  }
-  .navbar-toggle{
-    margin-top: 30px;
+  .wrapper {
+    width: 95% !important;
+    margin: auto;
   }
 }
 
