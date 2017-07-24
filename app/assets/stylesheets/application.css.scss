@@ -10,7 +10,7 @@
 /* universal css */
 body{
   background: asset_url('bg.jpg') center center fixed;
-  background-color: lightgrey;
+  background-repeat: no-repeat;
   background-size: cover;
   min-width: 300px;
 }
