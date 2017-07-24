@@ -26,10 +26,28 @@ footer{
   }
 }
 
-@media (max-width: 1200px) {
+
+
+@media (max-width: 800px) {
   .wrapper {
-    width: 95% !important;
+    width: 95%;
     margin: auto;
+  }
+  .for-mobile-about-image{
+    text-align: center;
+  }
+  .modal {
+    top: 20%;
+  }
+
+  footer{
+    p {
+      width: 75%;
+    }
+  }
+
+  #back-to-top{
+    display: none !important;
   }
 }
 

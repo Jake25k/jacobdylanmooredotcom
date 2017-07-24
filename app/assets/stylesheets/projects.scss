@@ -21,16 +21,19 @@
   float: right;
 }
 
-.project-content{
+.project-content {
   font-size: 17px;
+}
 
+.project_title{
+  word-break: break-all;
 }
 
 @media (max-width: 900px){
   .project-content{
     img{
-      max-width: 250px;
-      max-height: 275px;
+      max-width: 350px;
+      max-height: 325px;
     }
   }
 }
