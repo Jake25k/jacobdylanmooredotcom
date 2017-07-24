@@ -37,6 +37,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media (max-width: 800px) {
+  .long-parallax-text{
+    font-size: 1.8rem;
+  }
+}
 
 @media (min-width: 1200px) {
   .parallax1 {
