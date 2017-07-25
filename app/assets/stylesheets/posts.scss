@@ -36,8 +36,8 @@
 }
 
 //Large display support
-@media (min-width: 1800px) {
+@media (min-width: 1900px) {
   .parallax-blog {
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }

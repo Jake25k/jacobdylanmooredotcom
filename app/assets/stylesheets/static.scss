@@ -92,13 +92,13 @@
 
 //Large display support
 
-@media (min-width: 1800px) {
+@media (min-width: 1900px) {
   .parallax1 {
-    background-attachment: fixed;
+    background-attachment: scroll;
     zoom: 120%;
   }
   .parallax2 {
-    background-attachment: fixed;
+    background-attachment: scroll;
     zoom: 120%;
   }
 }
