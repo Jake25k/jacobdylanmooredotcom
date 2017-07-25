@@ -43,7 +43,7 @@
 }
 
 //Large display support
-@media (max-width: 1800px) {
+@media (min-width: 1800px) {
   .parallax-projects {
     background-attachment: fixed;
   }
