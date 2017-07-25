@@ -26,28 +26,6 @@ footer{
   }
 }
 
-
-
-@media (max-width: 800px) {
-  .wrapper {
-    width: 95% !important;
-    margin: auto;
-  }
-  .modal {
-    top: 20%;
-  }
-
-  footer{
-    p {
-      width: 75%;
-    }
-  }
-
-  #back-to-top{
-    display: none !important;
-  }
-}
-
 ::selection {
   background: lightpink;
 }
@@ -204,5 +182,25 @@ footer{
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    width: 95% !important;
+    margin: auto;
+  }
+  .modal {
+    top: 20%;
+  }
+
+  footer{
+    p {
+      width: 75%;
+    }
+  }
+
+  #back-to-top{
+    display: none !important;
   }
 }

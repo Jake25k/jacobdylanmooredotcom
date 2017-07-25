@@ -89,3 +89,15 @@
     zoom: 120%;
   }
 }
+
+//Large display support
+@media (max-width: 1900px) {
+  .parallax1 {
+    background-attachment: fixed;
+    zoom: 120%;
+  }
+  .parallax2 {
+    background-attachment: fixed;
+    zoom: 120%;
+  }
+}
