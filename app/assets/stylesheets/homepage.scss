@@ -66,3 +66,14 @@ a.social-media-icon{
   overflow-y:scroll;
   height: 130px;
 }
+
+//Mobile support
+
+@media (max-width: 500px) {
+  .parallax-homepage-text{
+    font-size: 3.6rem;
+  }
+  .bio-text{
+    font-size: 1.1rem;
+  }
+}

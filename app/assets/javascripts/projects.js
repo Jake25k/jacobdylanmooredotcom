@@ -12,12 +12,12 @@ $(document).on('turbolinks:load', function() {
             $.post('projects/render/chosenProjects', {project_type: choice}, function (partial) {
                 $('#renderedTable').html(partial)
             })
-            $(".tableToDissapear").hide()
-            $('#renderedTable').show();
+            $(".tableToDissapear").slideUp()
+            $('#renderedTable').slideDown();
         }
         else {
-            $(".tableToDissapear").show();
-            $('#renderedTable').hide();
+            $(".tableToDissapear").slideDown();
+            $('#renderedTable').slideUp();
         }
     });
 
