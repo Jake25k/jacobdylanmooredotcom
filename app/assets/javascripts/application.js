@@ -12,9 +12,12 @@
 $(document).on('turbolinks:load', function() {
     tinymce.init({
         selector: 'textarea',
-        browser_spellcheck: true,
-        toolbar: "undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage",
-        plugins: "wordcount paste image link media uploadimage autoresize",
-        file_picker_types: 'image media'
+        theme: "modern",
+        toolbar: "bold,italic,underline,|,bullist,numlist,outdent,indent,|,undo,redo,|,pastetext,pasteword,selectall,|,uploadimage",
+        pagebreak_separator: "<p class='page-separator'>&nbsp;</p>",
+        plugins: ["uploadimage"],
+        relative_urls: false,
+        remove_script_host: false,
+        document_base_url: (!window.location.origin ? window.location.protocol + "//" + window.location.host : window.location.origin) + "/",
     });
 });
