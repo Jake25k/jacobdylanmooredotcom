@@ -35,7 +35,7 @@
                 <%-@projects.order("created_at DESC").each do |project| %>
                     <tr>
                       <%- if project.draft == true %>
-                          <td> <%=link_to "#{project.title} (UNLISTED)", project_path(project.id)%> </td>
+                          <td> <%=link_to "#{project.title} (IN PROGRESS)", project_path(project.id)%> </td>
                       <%- else %>
                           <td> <%=link_to project.title, project_path(project.id) %> </td>
                       <% end %>
@@ -73,3 +73,5 @@
     </center>
   </div>
 </div>
+
+<%=render partial: "layouts/footer" %>

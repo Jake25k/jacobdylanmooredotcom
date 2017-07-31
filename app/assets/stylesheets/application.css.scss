@@ -26,6 +26,17 @@ footer{
   }
 }
 
+.contact-footer{
+  p {
+    background-color: white;
+    border-radius: 2px;
+    width: 8%;
+    min-width: 5%;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+}
+
 ::selection {
   background: lightpink;
 }

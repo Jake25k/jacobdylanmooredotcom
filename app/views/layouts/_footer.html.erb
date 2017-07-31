@@ -1,0 +1,26 @@
+<div class="center contact-footer">
+  <p>
+    __
+    <br>
+    <%=link_to "Contact Me".html_safe, '', data: {toggle:'modal', target:'#myModal'}  %>
+  </p>
+</div>
+
+<!-- Modal Contact -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center" id="myModalLabel">Contact Information:</h4>
+      </div>
+      <div class="modal-body center">
+        |
+        <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank" class="social-media-icon">LinkedIn</a>
+        | <br>
+        To request a resume, send me an email @ <%= mail_to "moorej37@mymail.nku.edu" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

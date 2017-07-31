@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
         selector: 'textarea',
         theme: "modern",
         toolbar: "bold,italic,underline,|,bullist,numlist,outdent,indent,|,undo,redo,| selectall |,uploadimage",
-        plugins: ["uploadimage"],
+        plugins: ["uploadimage, link, media"],
         relative_urls: false,
         remove_script_host: false,
         browser_spellcheck: true,

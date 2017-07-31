@@ -4,7 +4,7 @@
       <h1 class="title">
         <%= @post.title %>
         <%- if @post.draft == true %>
-          (UNLISTED)
+          (IN PROGRESS)
         <% end %>
       </h1>
         <div>
@@ -29,6 +29,8 @@
     </div>
   </div>
 </div>
+
+<%=render partial: "layouts/footer" %>
 
 <!--Modal-->
 <div class="modal fade" id="myModal" role="dialog">
