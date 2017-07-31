@@ -3,6 +3,9 @@
     <div class="panel-heading">
       <h1 class="title">
         <%= @post.title %>
+        <%- if @post.draft == true %>
+          (UNLISTED)
+        <% end %>
       </h1>
         <div>
           <%=link_to "Back", posts_path, class:"btn btn-primary" %>

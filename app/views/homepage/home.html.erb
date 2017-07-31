@@ -50,8 +50,8 @@
               </div>
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
                 <table class="table table-striped remove-table-margin-bottom">
-                  <%- if @posts.any? %>
-                    <%- @posts.order("created_at DESC").each do |post| %>
+                  <%- if Post.notDrafted.any? %>
+                    <%- Post.notDrafted.order("created_at DESC").each do |post| %>
                       <tr>
                         <th> <%=link_to truncate(post.title, length: 25), post_path(post.id) %> </th>
                         <td> <%=post.updated_at.strftime("%D") %></td>

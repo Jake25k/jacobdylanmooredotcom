@@ -14,19 +14,40 @@
     <% end %>
     <div>
       <table class="table table-striped">
-        <%-if @posts.any? %>
-          <th> Post Name:</th>
-          <th> Published: </th>
-          <%-@posts.order("created_at DESC").each do |post| %>
-              <tr>
-                <td> <%=link_to post.title, post_path(post.id) %> </td>
-                <td> <%= post.updated_at.strftime("%D") %> </td>
-              </tr>
-          <% end %>
+        <%- if current_admin %>
+            <%-if @posts.any? %>
+                <th> Post Name:</th>
+                <th> Published: </th>
+                <%-@posts.order("created_at DESC").each do |post| %>
+                    <tr>
+                      <%- if post.draft == true %>
+                          <td> <%=link_to "#{post.title} (UNLISTED)", post_path(post.id)%> </td>
+                      <%- else %>
+                          <td> <%=link_to post.title, post_path(post.id) %> </td>
+                      <% end %>
+                      <td> <%= post.updated_at.strftime("%D") %> </td>
+                    </tr>
+                <% end %>
+            <%-else %>
+                <div class="center">
+                  Currently no content.
+                </div>
+            <% end %>
         <%-else %>
-          <div class="center">
-            Currently no content.
-          </div>
+            <%-if Post.notDrafted.any? %>
+                <th> Post Name:</th>
+                <th> Published: </th>
+                <%-Post.notDrafted.order("created_at DESC").each do |post| %>
+                    <tr>
+                      <td> <%=link_to post.title, post_path(post.id) %> </td>
+                      <td> <%= post.updated_at.strftime("%D") %> </td>
+                    </tr>
+                <% end %>
+            <%-else %>
+                <div class="center">
+                  Currently no content.
+                </div>
+            <% end %>
         <% end %>
         <div class="center">
           <%= will_paginate @posts %>

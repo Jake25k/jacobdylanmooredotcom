@@ -4,6 +4,9 @@
       <div class="">
         <h1 class="title">
           <%= @project.title %>
+          <%- if @project.draft == true %>
+              (UNLISTED)
+          <% end %>
         </h1>
       </div>
       <div>

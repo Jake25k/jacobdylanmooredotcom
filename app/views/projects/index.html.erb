@@ -18,7 +18,7 @@
             Select a type:
             <select id="selector">
               <option value="nil">All</option>
-              <%-Project.all.map(&:project_type).uniq.each do |p|%>
+              <%-Project.notDrafted.all.map(&:project_type).uniq.each do |p|%>
                 <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
               <% end %>
             </select>
@@ -28,19 +28,40 @@
 
     <div class="tableToDissapear">
       <table class="table table-striped ">
-        <%-if @projects.any? %>
-            <th> Project Name:</th>
-            <th> Description: </th>
-            <%-@projects.order("created_at DESC").each do |project| %>
-                <tr>
-                  <td> <%=link_to project.title, project_path(project.id) %> </td>
-                  <td> <%=project.description %> </td>
-                </tr>
+        <%- if current_admin %>
+            <%-if @projects.any? %>
+                <th> Project Name:</th>
+                <th> Description: </th>
+                <%-@projects.order("created_at DESC").each do |project| %>
+                    <tr>
+                      <%- if project.draft == true %>
+                          <td> <%=link_to "#{project.title} (UNLISTED)", project_path(project.id)%> </td>
+                      <%- else %>
+                          <td> <%=link_to project.title, project_path(project.id) %> </td>
+                      <% end %>
+                      <td> <%= project.description %> </td>
+                    </tr>
+                <% end %>
+            <%-else %>
+                <div class="center">
+                  Currently no content.
+                </div>
             <% end %>
         <%-else %>
-            <div class="center">
-              Currently no content.
-            </div>
+            <%-if Project.notDrafted.any? %>
+                <th> Project Name:</th>
+                <th> Description: </th>
+                <%-Project.notDrafted.order("created_at DESC").each do |project| %>
+                    <tr>
+                      <td> <%=link_to project.title, project_path(project.id) %> </td>
+                      <td> <%= project.updated_at.strftime("%D") %> </td>
+                    </tr>
+                <% end %>
+            <%-else %>
+                <div class="center">
+                  Currently no content.
+                </div>
+            <% end %>
         <% end %>
       </table>
     </div>
