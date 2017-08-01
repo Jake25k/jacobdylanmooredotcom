@@ -24,6 +24,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+
+    # Users cant view hidden posts
+    if @post.draft == true
+      if !current_admin
+        redirect_to root_path
+      end
+    end
   end
 
   def edit
@@ -36,6 +43,11 @@ class PostsController < ApplicationController
       redirect_to post_path(@post)
     else
       render action: "new"
+    end
+
+    # Keep created_at time up to date until the data is ready for publication
+    if @post.draft == true
+      @post.update_attributes(created_at: Time.now)
     end
   end
 

@@ -26,6 +26,13 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+
+    # Users cant view hidden projects
+    if @project.draft == true
+      if !current_admin
+        redirect_to root_path
+      end
+    end
   end
 
   def edit
