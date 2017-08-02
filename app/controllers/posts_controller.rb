@@ -39,15 +39,22 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+
+    # variable used to see what the boolean was before the update
+    trackBooleanBefore = @post.draft
+
     if @post.update_attributes(post_params)
+
+      # if there is a switch from true to false, then update the time to reflect accurate publication
+      trackBooleanAfter = @post.draft
+
+      if (trackBooleanBefore == true && trackBooleanAfter == false)
+        time = Time.now
+        @post.update_attributes(created_at: time, updated_at: time)
+      end
       redirect_to post_path(@post)
     else
       render action: "new"
-    end
-
-    # Keep created_at time up to date until the data is ready for publication
-    if @post.draft == true
-      @post.update_attributes(created_at: Time.now)
     end
   end
 
