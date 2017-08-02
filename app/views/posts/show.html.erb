@@ -16,9 +16,13 @@
         </div>
       </div>
     <div class="panel-body">
-      <b> Published on: <%= @post.created_at.strftime("%D") %> </b> <br>
-      <%-if @post.updated_at != @post.created_at %>
-          <b> Edited on <%= @post.updated_at.strftime("%D") %> </b>
+      <%- if @post.draft == false %>
+        <b> Published on: <%= @post.created_at.strftime("%D") %> </b> <br>
+        <%-if @post.updated_at != @post.created_at %>
+            <b> Edited on <%= @post.updated_at.strftime("%D") %> </b>
+        <% end %>
+      <% else %>
+          <b>DRAFT MODE (Currently Not Published)</b>
       <% end %>
       <div class="margin-top posts-content">
         <%= (@post.content).html_safe%>
