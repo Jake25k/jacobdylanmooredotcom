@@ -58,7 +58,7 @@
         <% end %>
       <% end %>
     <% else %>
-      <%- Project.notDrafted.order("created_at DESC").each do |project| %>
+      <%- @projects.order("created_at DESC").each do |project| %>
         <%=link_to project_path(project) do %>
           <div class = "col-md-6 center">
             <%- if project.cover_image.url == "default-thumbnail.jpg" %>
