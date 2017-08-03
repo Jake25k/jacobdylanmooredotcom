@@ -26,12 +26,12 @@
   background-position: center;
 
   &:hover {
-    .project-panel-title{
-      display: none;
-    }
-    .project-panel-description{
-      display: block;
-    }
+    //.project-panel-title{
+    //  display: none;
+    //}
+    //.project-panel-description{
+    //  display: block;
+    //}
     //-webkit-filter: blur(1px);
     //-moz-filter: blur(1px);
     //-ms-filter: blur(1px);
@@ -55,14 +55,13 @@
   color: white;
   text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
 
-}
+  &:hover{
+    color: deepskyblue;
 
-.project-panel-description{
-  background-color: #2E2F30;
-  font-size: 2.0rem;
-  color: white;
-  text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
-  display: none;
+    .project-panel-description{
+    }
+  }
+
 }
 
 //Mobile support

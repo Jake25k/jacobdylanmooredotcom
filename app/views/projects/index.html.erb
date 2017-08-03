@@ -8,7 +8,7 @@
   </div>
   <div class="panel">
     <%-if current_admin %>
-      <div class="panel-body">
+      <div class="panel-body center">
         <%=link_to "New Project", new_project_path, class:"btn btn-primary" %>
       </div>
     <% end %>
@@ -41,20 +41,16 @@
               <div style="background-image: asset_url('default-thumbnail.jpg');" class="cover_image">
                 <%-if project.draft == true %>
                   <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-                  <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
                 <% else %>
                   <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-                  <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
                 <%end%>
               </div>
             <% else %>
               <div style="background-image: url(<%= "'" + "#{project.cover_image.url}" + "'" %>);" class="cover_image">
                 <%-if project.draft == true %>
-                    <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-                    <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
+                  <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
                 <% else %>
-                    <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-                    <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
+                  <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
                 <%end%>
               </div>
             <%end %>
@@ -68,12 +64,10 @@
             <%- if project.cover_image.url == "default-thumbnail.jpg" %>
               <div style="background-image: asset_url('default-thumbnail.jpg');" class="cover_image">
                 <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-                <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
               </div>
           <% else %>
             <div style="background-image: url(<%= "'" + "#{project.cover_image.url}" + "'" %>);" class="cover_image">
               <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-              <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
             </div>
             <%end %>
             </div>
@@ -84,7 +78,8 @@
   <% #rendered partial appears here %>
   <div id="renderedTable">
   </div>
-  <div class="tableToDissapear center col-md-12">
-    <%= will_paginate @projects, renderer: BootstrapPagination::Rails %>
+  <div class="center col-md-12">
+    <%= will_paginate @projects, renderer: BootstrapPagination::Rails, class: "tableToDissapear" %>
+    <%=render partial: "layouts/footer" %>
   </div>
 </div>
