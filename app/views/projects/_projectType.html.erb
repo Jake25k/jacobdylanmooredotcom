@@ -1,16 +1,20 @@
-<table class="table table-striped ">
+<div class="table table-striped">
   <%-if projects.any? %>
-      <th> Project Name:</th>
-      <th> Description: </th>
       <%-projects.order("created_at DESC").each do |project| %>
-          <tr>
-            <td> <%=link_to project.title, project_path(project.id) %> </td>
-            <td> <%=project.description %> </td>
-          </tr>
+          <%=link_to project_path(project) do %>
+              <div class = "col-md-4 center">
+                <%=image_tag project.cover_image.url, class: "cover_image" %>
+                <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+                <div class="move-text-up">
+                </div>
+                <div class="project-panel-description">
+                </div>
+              </div>
+          <% end %>
       <% end %>
   <%-else %>
       <div class="center">
         Currently no content.
       </div>
   <% end %>
-</table>
+</div>

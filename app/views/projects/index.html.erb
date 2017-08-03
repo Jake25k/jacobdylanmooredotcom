@@ -12,66 +12,61 @@
         <%=link_to "New Project", new_project_path, class:"btn btn-primary" %>
       </div>
     <% end %>
-      <%-if @projects.any? %>
-        <center>
-          <h4>
-            Select a type:
-            <select id="selector">
-              <option value="nil">All</option>
-              <%-Project.notDrafted.all.map(&:project_type).uniq.each do |p|%>
-                <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
-              <% end %>
-            </select>
-          </h4>
-        </center>
-      <%end %>
-
-    <div class="tableToDissapear">
-      <table class="table table-striped ">
-        <%- if current_admin %>
-            <%-if @projects.any? %>
-                <th> Project Name:</th>
-                <th> Description: </th>
-                <%-@projects.order("created_at DESC").each do |project| %>
-                    <tr>
-                      <%- if project.draft == true %>
-                          <td> <%=link_to "#{project.title} (IN PROGRESS)", project_path(project.id)%> </td>
-                      <%- else %>
-                          <td> <%=link_to project.title, project_path(project.id) %> </td>
-                      <% end %>
-                      <td> <%= project.description %> </td>
-                    </tr>
-                <% end %>
-            <%-else %>
-                <div class="center">
-                  Currently no content.
-                </div>
+    <%-if @projects.any? %>
+      <center>
+        <h4>
+          Select a type:
+          <select id="selector">
+            <option value="nil">All</option>
+            <%-Project.notDrafted.all.map(&:project_type).uniq.each do |p|%>
+              <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
             <% end %>
-        <%-else %>
-            <%-if Project.notDrafted.any? %>
-                <th> Project Name:</th>
-                <th> Description: </th>
-                <%-Project.notDrafted.order("created_at DESC").each do |project| %>
-                    <tr>
-                      <td> <%=link_to project.title, project_path(project.id) %> </td>
-                      <td> <%= project.updated_at.strftime("%D") %> </td>
-                    </tr>
-                <% end %>
-            <%-else %>
-                <div class="center">
-                  Currently no content.
+          </select>
+        </h4>
+      </center>
+    <%end %>
+  </div>
+  <div class="tableToDissapear">
+    <%-if current_admin %>
+      <%- @projects.order("created_at DESC").each do |project| %>
+        <%=link_to project_path(project) do %>
+          <div class = "col-md-4 center">
+            <%=image_tag project.cover_image.url, class: "cover_image" %>
+            <%-if project.draft == true %>
+              <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
+            <% else %>
+                <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+            <%end%>
+            <div class="move-text-up">
+            </div>
+            <div class="project-panel-description">
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% else %>
+        <%- Project.notDrafted.order("created_at DESC").each do |project| %>
+            <%=link_to project_path(project) do %>
+                <div class = "col-md-4 center">
+                  <%=image_tag project.cover_image.url, class: "cover_image" %>
+                  <%-if project.draft == true %>
+                      <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
+                  <% else %>
+                      <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+                  <%end%>
+                  <div class="move-text-up">
+                  </div>
+                  <div class="project-panel-description">
+                  </div>
                 </div>
             <% end %>
         <% end %>
-      </table>
-    </div>
-    <% #rendered partial appears here %>
-    <div id="renderedTable">
-    </div>
-    <center class="tableToDissapear">
-      <%= will_paginate @projects, renderer: BootstrapPagination::Rails %>
-    </center>
+      <% end %>
+  </div>
+  <% #rendered partial appears here %>
+  <div id="renderedTable">
+  </div>
+  <div class="tableToDissapear center col-md-12">
+    <%= will_paginate @projects, renderer: BootstrapPagination::Rails %>
   </div>
 </div>
-
-<%=render partial: "layouts/footer" %>

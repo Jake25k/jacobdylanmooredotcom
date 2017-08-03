@@ -12,6 +12,7 @@
             <%= f.text_field :description %><br>
             <%= f.label :project_type %> <br>
             <%= f.text_field :project_type, input_html: { data: {autocomplete_source: '/projects/new/project_types'} }%><br>
+            <%= f.input :cover_image, as: :file %><br>
             <%= f.label :content %><br>
             <%= f.text_area :content, class: "tinymce", rows: "20" %>
             <%= f.input :draft, label: "Draft?", as: :boolean, checked_value: true, unchecked_value: false %>

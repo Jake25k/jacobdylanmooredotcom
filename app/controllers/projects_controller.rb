@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
-    @projects = @projects.paginate(:page => params[:page], :per_page => 15)
+    @projects = @projects.paginate(:page => params[:page], :per_page => 6)
   end
 
   def new
@@ -78,6 +78,6 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :content, :pinned_project, :project_type, :draft)
+    params.require(:project).permit(:title, :description, :content, :pinned_project, :project_type, :draft, :cover_image)
   end
 end
