@@ -20,11 +20,4 @@ $(document).on('turbolinks:load', function() {
             $('#renderedTable').slideUp();
         }
     });
-
-    // $(".cover_image").hover( function() {
-    //     $(".project-panel-title").hide();
-    // })
-
-
-
 })
