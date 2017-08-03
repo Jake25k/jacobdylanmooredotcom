@@ -3,7 +3,12 @@ class ProjectsController < ApplicationController
   before_action :authenticate_admin!, except: [:show, :index, :getProjectTypePartial]
 
   def index
-    @projects = Project.all
+    if current_admin
+      @projects = Project.all
+    else
+      @projects = Project.notDrafted
+    end
+
     @projects = @projects.paginate(:page => params[:page], :per_page => 6)
   end
 
