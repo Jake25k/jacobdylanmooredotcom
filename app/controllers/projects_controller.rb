@@ -75,7 +75,13 @@ class ProjectsController < ApplicationController
   end
 
   def getProjectTypePartial
-    projectList = Project.where(project_type: params[:project_type].gsub('_',' '))
+
+    if current_admin
+      projectList = Project.where(project_type: params[:project_type].gsub('_',' '))
+    else
+      availableProjects = Project.notDrafted
+      projectList = availableProjects.where(project_type: params[:project_type].gsub('_',' '))
+    end
 
     render partial: '/projects/projectType', locals: {projects: projectList}
   end

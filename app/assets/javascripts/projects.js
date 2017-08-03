@@ -21,6 +21,10 @@ $(document).on('turbolinks:load', function() {
         }
     });
 
+    // $(".cover_image").hover( function() {
+    //     $(".project-panel-title").hide();
+    // })
+
 
 
 })

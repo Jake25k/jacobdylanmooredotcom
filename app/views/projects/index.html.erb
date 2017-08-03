@@ -18,10 +18,16 @@
           Select a type:
           <select id="selector">
             <option value="nil">All</option>
-            <%-Project.notDrafted.all.map(&:project_type).uniq.each do |p|%>
-              <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
+            <%- if current_admin%>
+              <%-Project.all.map(&:project_type).uniq.each do |p|%>
+                <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
+              <% end %>
+            <% else %>
+              <%-Project.notDrafted.all.map(&:project_type).uniq.each do |p|%>
+                <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
             <% end %>
-          </select>
+          <% end %>
+         </select>
         </h4>
       </center>
     <%end %>
@@ -30,12 +36,42 @@
     <%-if current_admin %>
       <%- @projects.order("created_at DESC").each do |project| %>
         <%=link_to project_path(project) do %>
-          <div class = "col-md-4 center">
+          <div class = "col-md-6 center">
+            <%- if project.cover_image.url == "default-thumbnail.jpg" %>
+              <div style="background-image: asset_url('default-thumbnail.jpg');" class="cover_image">
+                <%-if project.draft == true %>
+                  <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
+                  <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
+                <% else %>
+                  <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+                  <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
+                <%end%>
+              </div>
+            <% else %>
+              <div style="background-image: url(<%= "'" + "#{project.cover_image.url}" + "'" %>);" class="cover_image">
+                <%-if project.draft == true %>
+                    <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
+                    <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
+                <% else %>
+                    <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+                    <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
+                <%end%>
+              </div>
+            <%end %>
+          </div>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%- Project.notDrafted.order("created_at DESC").each do |project| %>
+        <%=link_to project_path(project) do %>
+          <div class = "col-md-6 center">
             <%=image_tag project.cover_image.url, class: "cover_image" %>
             <%-if project.draft == true %>
               <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
+              <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
             <% else %>
-                <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+              <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
+              <%=content_tag(:div, "#{project.description}", class: "project-panel-description center") %>
             <%end%>
             <div class="move-text-up">
             </div>
@@ -44,24 +80,7 @@
           </div>
         <% end %>
       <% end %>
-    <% else %>
-        <%- Project.notDrafted.order("created_at DESC").each do |project| %>
-            <%=link_to project_path(project) do %>
-                <div class = "col-md-4 center">
-                  <%=image_tag project.cover_image.url, class: "cover_image" %>
-                  <%-if project.draft == true %>
-                      <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-                  <% else %>
-                      <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-                  <%end%>
-                  <div class="move-text-up">
-                  </div>
-                  <div class="project-panel-description">
-                  </div>
-                </div>
-            <% end %>
-        <% end %>
-      <% end %>
+    <% end %>
   </div>
   <% #rendered partial appears here %>
   <div id="renderedTable">
