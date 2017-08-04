@@ -18,60 +18,20 @@
           Select a type:
           <select id="selector">
             <option value="nil">All</option>
-            <%- if current_admin%>
-              <%-Project.all.map(&:project_type).uniq.each do |p|%>
-                <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
-              <% end %>
-            <% else %>
-              <%-Project.notDrafted.all.map(&:project_type).uniq.each do |p|%>
-                <option value=<%=p.gsub(' ','_')%>> <%= p%></option>
+            <%-@projects.map(&:project_type).uniq.each do |p|%>
+              <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
             <% end %>
-          <% end %>
-         </select>
+          </select>
         </h4>
       </center>
     <%end %>
   </div>
   <div class="tableToDissapear">
-    <%-if current_admin %>
-      <%- @projects.order("created_at DESC").each do |project| %>
-        <%=link_to project_path(project) do %>
-          <div class = "col-md-6 center">
-            <%- if project.cover_image.url == "default-thumbnail.jpg" %>
-              <div style="background-image: asset_url('default-thumbnail.jpg');" class="cover_image">
-                <%-if project.draft == true %>
-                  <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-                <% else %>
-                  <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-                <%end%>
-              </div>
-            <% else %>
-              <div style="background-image: url(<%= "'" + "#{project.cover_image.url}" + "'" %>);" class="cover_image">
-                <%-if project.draft == true %>
-                  <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-                <% else %>
-                  <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-                <%end%>
-              </div>
-            <%end %>
-          </div>
-        <% end %>
-      <% end %>
-    <% else %>
-      <%- @projects.order("created_at DESC").each do |project| %>
-        <%=link_to project_path(project) do %>
-          <div class = "col-md-6 center">
-            <%- if project.cover_image.url == "default-thumbnail.jpg" %>
-              <div style="background-image: asset_url('default-thumbnail.jpg');" class="cover_image">
-                <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-              </div>
-          <% else %>
-            <div style="background-image: url(<%= "'" + "#{project.cover_image.url}" + "'" %>);" class="cover_image">
-              <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-            </div>
-            <%end %>
-            </div>
-        <% end %>
+    <%- @projects.order("created_at DESC").each do |project| %>
+      <%=link_to project_path(project) do %>
+        <div class = "col-md-6 center">
+          <%=project.project_cover_image_with_text %>
+        </div>
       <% end %>
     <% end %>
   </div>
@@ -79,7 +39,7 @@
   <div id="renderedTable">
   </div>
   <div class="center col-md-12">
-    <%= will_paginate @projects, renderer: BootstrapPagination::Rails, class: "tableToDissapear" %>
+    <%= will_paginate @projectsForPagination, renderer: BootstrapPagination::Rails, class: "tableToDissapear" %>
     <%=render partial: "layouts/footer" %>
   </div>
 </div>
