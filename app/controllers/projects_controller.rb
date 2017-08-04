@@ -9,8 +9,8 @@ class ProjectsController < ApplicationController
       @projects = Project.notDrafted
     end
 
-    @projectsForPagination = Project.all.paginate(:page => params[:page], :per_page => 6)
-    @projects = @projects
+    @projectsForTags = @projects
+    @projects = @projects.all.paginate(:page => params[:page], :per_page => 6)
   end
 
   def new
