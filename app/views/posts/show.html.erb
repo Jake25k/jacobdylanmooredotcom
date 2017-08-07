@@ -31,32 +31,10 @@
       <div class="margin-top posts-content">
         <br>
         <%= (@post.content).html_safe%>
-        <%-if current_admin %>
-            <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=http://www.jacobdylanmoore.com/posts/#{@post.id}", target: "_blank", class:"btn btn-primary share-button" %>
-        <%end%>
+        <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=#{request.original_url}", target: "_blank", class: "btn btn-primary center"%>
       </div>
     </div>
   </div>
 </div>
 
 <%=render partial: "layouts/footer" %>
-
-<!--Modal-->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title center" id="myModalLabel">Share Information:</h4>
-      </div>
-      <div class="modal-body">
-        <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=#{request.original_url}", target: "_blank", class: "btn btn-primary center"%>
-        <br><br>
-        <%= "Copy this text:"%>
-        <h3>
-          <%= "Jake Moore just made a new blog post titled '#{@post.title}'. View it here! #{request.original_url}" %>
-        </h3>
-      </div>
-    </div>
-  </div>
-</div>
