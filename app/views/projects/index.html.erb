@@ -27,10 +27,10 @@
     <%end %>
   </div>
   <div class="tableToDissapear">
-    <%- @projects.order("created_at DESC").each do |project| %>
+    <%- @projects.each do |project| %>
       <%=link_to project_path(project) do %>
         <div class = "col-md-6 center">
-          <%=project.project_cover_image_with_text %>
+          <%=project_cover_image_with_text(project) %>
         </div>
       <% end %>
     <% end %>

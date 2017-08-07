@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
     end
 
     @projectsForTags = @projects
-    @projects = @projects.all.paginate(:page => params[:page], :per_page => 6)
+    @projects = @projects.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
   end
 
   def new

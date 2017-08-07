@@ -1,5 +1,4 @@
 class Project < ApplicationRecord
-  include ActionView::Helpers::TagHelper
   validates :title, :description, :content, :project_type, presence: true
 
   has_attached_file :cover_image, :default_url => "default-thumbnail.jpg"
@@ -10,20 +9,12 @@ class Project < ApplicationRecord
 
   def project_title
     if self.draft == true
-      content_tag(:div, "#{self.title} (DRAFT)", class: "project-panel-title center", data: {toggle: "tooltip", placement: "bottom"}, title: "#{self.description}")
+      "#{self.title} (DRAFT)"
     end
     if self.completed == true
-      content_tag(:div, "#{self.title}", class: "project-panel-title center", data: {toggle: "tooltip", placement: "bottom"}, title: "#{self.description}")
+      "#{self.title}"
     else
-      content_tag(:div, "#{self.title} (In-Progress)", class: "project-panel-title center", data: {toggle: "tooltip", placement: "bottom"}, title: "#{self.description}")
-    end
-  end
-
-  def project_cover_image_with_text
-    if self.cover_image.url == "default-thumbnail.jpg"
-      content_tag(:div, self.project_title, class: "cover_image", style: "background-image: asset_url('default-thumbnail.jpg');")
-    else
-      content_tag(:div, self.project_title, class: "cover_image", style: "background-image: url('#{self.cover_image.url}');');")
+      "#{self.title} (In-Progress)"
     end
   end
 end

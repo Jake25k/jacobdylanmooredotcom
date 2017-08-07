@@ -4,55 +4,38 @@
       Personal Blog
     </div>
   </div>
-  <div class ="black-div">
-  </div>
-  <div class="panel">
-    <%-if current_admin %>
-        <div class="panel-body center">
-          <%=link_to "New Post", new_post_path, class:"btn btn-primary" %>
+  <%-if current_admin %>
+    <div class="panel">
+      <div class="panel-body center">
+        <%=link_to "New Post", new_post_path, class:"btn btn-primary" %>
+      </div>
+    </div>
+  <% else %>
+    <br>
+  <% end %>
+  <div class="posts-index-section">
+    <%- @posts.each do |post| %>
+      <div class="panel post-panel">
+        <div class="panel-heading">
+          <h2 class="post-title">
+            <%=link_to post.post_title, post_path(post) %>
+          </h2>
         </div>
+        <div class="post-description">
+          <%- if post.draft == true %>
+            <b>CURRENTLY IN DRAFT MODE</b>
+          <% else %>
+            <b><%= "Created at: " + post.created_at.strftime("%Y %b%e %H:%M") %><br></b>
+            <%- if post.created_at != post.updated_at %>
+              <b><%= "Edited on: " + post.updated_at.strftime("%Y %b%e %H:%M") %><br></b>
+            <% end %>
+          <% end %>
+          <%= post.content.html_safe %>
+        </div>
+      </div>
     <% end %>
-    <div>
-      <table class="table table-striped">
-        <%- if current_admin %>
-            <%-if @posts.any? %>
-                <th> Post Name:</th>
-                <th> Published: </th>
-                <%-@posts.order("created_at DESC").each do |post| %>
-                    <tr>
-                      <%- if post.draft == true %>
-                          <td> <%=link_to "#{post.title} (Draft)", post_path(post.id)%> </td>
-                      <%- else %>
-                          <td> <%=link_to post.title, post_path(post.id) %> </td>
-                      <% end %>
-                      <td> <%= post.updated_at.strftime("%D") %> </td>
-                    </tr>
-                <% end %>
-            <%-else %>
-                <div class="center">
-                  Currently no content.
-                </div>
-            <% end %>
-        <%-else %>
-            <%-if Post.notDrafted.any? %>
-                <th> Post Name:</th>
-                <th> Published: </th>
-                <%-Post.notDrafted.order("created_at DESC").each do |post| %>
-                    <tr>
-                      <td> <%=link_to post.title, post_path(post.id) %> </td>
-                      <td> <%= post.updated_at.strftime("%D") %> </td>
-                    </tr>
-                <% end %>
-            <%-else %>
-                <div class="center">
-                  Currently no content.
-                </div>
-            <% end %>
-        <% end %>
-        <div class="center">
-          <%= will_paginate @posts %>
-        </div>
-      </table>
+    <div class="center">
+      <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
     </div>
   </div>
 </div>

@@ -3,12 +3,7 @@
     <div class="panel-heading">
       <div class="">
         <h1 class="title">
-          <%= @project.title %>
-          <%- if @project.draft == true %>
-              (DRAFT)
-          <%- elsif @project.completed == false %>
-            (In-Progress)
-          <% end %>
+          <%= @project.project_title %>
         </h1>
       </div>
       <div>

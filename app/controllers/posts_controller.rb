@@ -3,8 +3,13 @@ class PostsController < ApplicationController
   before_action :authenticate_admin!, except: [:show, :index]
 
   def index
-    @posts = Post.all
-    @posts= @posts.paginate(:page => params[:page], :per_page => 15)
+    if current_admin
+      @posts = Post.all
+    else
+      @posts = Post.notDrafted
+    end
+
+    @posts = @posts.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
   end
 
   def new
