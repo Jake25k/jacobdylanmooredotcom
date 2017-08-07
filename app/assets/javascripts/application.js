@@ -20,4 +20,8 @@ $(document).on('turbolinks:load', function() {
         browser_spellcheck: true,
         document_base_url: (!window.location.origin ? window.location.protocol + "//" + window.location.host : window.location.origin) + "/",
     });
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 });
