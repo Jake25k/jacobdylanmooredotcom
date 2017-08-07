@@ -21,14 +21,15 @@
       </div>
     <div class="panel-body">
       <%- if @post.draft == false %>
-        <b> Published on: <%= @post.created_at.strftime("%Y %b%e %H:%M") %> </b> <br>
+        <b> Published on: <%= @post.created_at.strftime("%Y %b%e %H:%M") %> </b><br>
         <%-if @post.updated_at != @post.created_at %>
-            <b> Edited on: <%= @post.updated_at.strftime("%Y %b%e %H:%M") %> </b>
+            <b> Edited on: <%= @post.updated_at.strftime("%Y %b%e %H:%M") %> </b><br>
         <% end %>
       <% else %>
-          <b>DRAFT MODE (Currently Not Published)</b><br><br>
+          <b>DRAFT MODE (Currently Not Published)</b><br>
       <% end %>
       <div class="margin-top posts-content">
+        <br>
         <%= (@post.content).html_safe%>
         <%-if current_admin %>
             <%= link_to "Share on Facebook", '',class: "btn btn-primary", data: {toggle:'modal', target:'#myModal'} %>

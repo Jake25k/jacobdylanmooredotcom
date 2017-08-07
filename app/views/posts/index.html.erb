@@ -23,14 +23,16 @@
         </div>
         <div class="post-description">
           <%- if post.draft == true %>
-            <b>CURRENTLY IN DRAFT MODE</b>
+            <b>CURRENTLY IN DRAFT MODE</b><br>
           <% else %>
-            <b><%= "Created at: " + post.created_at.strftime("%Y %b%e %H:%M") %><br></b>
+            <b><%= "Created at: " + post.created_at.strftime("%Y %b %e %H:%M") %></b><br>
             <%- if post.created_at != post.updated_at %>
-              <b><%= "Edited on: " + post.updated_at.strftime("%Y %b%e %H:%M") %><br></b>
+              <b><%= "Edited on: " + post.updated_at.strftime("%Y %b %e %H:%M") %></b><br>
             <% end %>
           <% end %>
+          <br>
           <%= post.content.html_safe %>
+    <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=http://www.jacobdylanmoore.com/posts/#{post.id}", class:"btn btn-primary share-button" %>
         </div>
       </div>
     <% end %>
