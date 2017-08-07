@@ -5,13 +5,20 @@
         <h1 class="title">
           <%= @project.title %>
           <%- if @project.draft == true %>
-              (IN PROGRESS)
+              (DRAFT)
+          <%- elsif @project.completed == false %>
+            (In-Progress)
           <% end %>
         </h1>
       </div>
       <div>
         <div>
-          <%=link_to "Back", :back, class:"btn btn-primary" %>
+          <%-if current_admin %>
+              <%=link_to "Back", projects_path, class:"btn btn-primary" %>
+          <% else %>
+            <%=link_to "Back", :back, class:"btn btn-primary" %>
+          <% end %>
+
           <%- if current_admin %>
             <%=link_to "Delete", project_path(@project), method: :delete, data: {confirm: "Confirm delete?"}, class: "btn btn-danger" %>
             <%=link_to "Edit", edit_project_path(@project), class:"btn btn-info" %>

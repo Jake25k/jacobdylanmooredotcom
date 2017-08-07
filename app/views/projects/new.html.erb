@@ -16,6 +16,7 @@
             <%= f.label :content %><br>
             <%= f.text_area :content, class: "tinymce", rows: "20" %>
             <%= f.input :draft, label: "Draft?", as: :boolean, checked_value: true, unchecked_value: false %>
+            <%= f.input :completed, label: "Completed?", as: :boolean, checked_value: true, unchecked_value: false %>
             <%= tinymce %>
           </div>
 

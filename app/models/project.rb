@@ -10,9 +10,12 @@ class Project < ApplicationRecord
 
   def project_title
     if self.draft == true
-       content_tag(:div, "#{self.title} (DRAFT)", class: "project-panel-title center")
-     else
-       content_tag(:div, "#{self.title}", class: "project-panel-title center")
+      content_tag(:div, "#{self.title} (DRAFT)", class: "project-panel-title center")
+    end
+    if self.completed == true
+      content_tag(:div, "#{self.title}", class: "project-panel-title center")
+    else
+      content_tag(:div, "#{self.title} (In-Progress)", class: "project-panel-title center")
     end
   end
 

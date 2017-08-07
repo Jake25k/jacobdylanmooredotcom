@@ -6,24 +6,24 @@
   </div>
   <div class ="black-div">
   </div>
-  <div class="panel">
+  <div class="panel center">
     <%-if current_admin %>
       <div class="panel-body center">
         <%=link_to "New Project", new_project_path, class:"btn btn-primary" %>
       </div>
     <% end %>
     <%-if @projects.any? %>
-      <center>
-        <h4>
-          Select a type:
-          <select id="selector">
-            <option value="nil">All</option>
-            <%-@projectsForTags.map(&:project_type).uniq.each do |p|%>
-              <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
-            <% end %>
-          </select>
-        </h4>
-      </center>
+      <h4>
+        Select a type:
+        <select id="selector">
+          <option value="nil">All</option>
+          <%-@projectsForTags.map(&:project_type).uniq.each do |p|%>
+            <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
+          <% end %>
+        </select>
+      </h4>
+    <% else %>
+        Currently no content.<br><br>
     <%end %>
   </div>
   <div class="tableToDissapear">
