@@ -28,6 +28,9 @@
   margin-top: 5px;
   a{
     color: white;
+    &:hover{
+      color:deepskyblue;
+    }
   }
 }
 .post-description{
