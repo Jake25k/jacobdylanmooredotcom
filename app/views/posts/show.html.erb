@@ -32,7 +32,7 @@
         <br>
         <%= (@post.content).html_safe%>
         <%-if current_admin %>
-            <%= link_to "Share on Facebook", '',class: "btn btn-primary", data: {toggle:'modal', target:'#myModal'} %>
+            <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=http://www.jacobdylanmoore.com/posts/#{@post.id}", target: "_blank", class:"btn btn-primary share-button" %>
         <%end%>
       </div>
     </div>
