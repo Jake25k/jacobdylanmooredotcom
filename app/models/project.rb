@@ -13,7 +13,7 @@ class Project < ApplicationRecord
     elsif self.completed == true
       "#{self.title}"
     else
-      "#{self.title} (In-Progress)"
+      "#{self.title} (In Progress)"
     end
   end
 end

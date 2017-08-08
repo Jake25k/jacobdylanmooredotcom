@@ -12,19 +12,17 @@
         <%=link_to "New Project", new_project_path, class:"btn btn-primary" %>
       </div>
     <% end %>
-    <%-if @projects.any? %>
-      <h4>
-        Select a type:
-        <select id="selector">
-          <option value="nil">All</option>
-          <%-@projectsForTags.each do |p|%>
-            <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
-          <% end %>
-        </select>
-      </h4>
-    <% else %>
-        Currently no content.<br><br>
-    <%end %>
+    <h4>
+      Select a type:
+      <select id="selector">
+        <option value="nil">All</option>
+        <option value="InProgress"> In Progress </option>
+        <option disabled> ------------- </option>
+        <%-@projectsForTags.each do |p|%>
+          <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
+        <% end %>
+      </select>
+    </h4>
   </div>
   <div class="tableToDissapear">
     <%- @projects.each do |project| %>

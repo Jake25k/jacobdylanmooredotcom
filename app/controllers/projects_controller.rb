@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
     end
 
     @projectsForTags = project_types_as_array(Project).sort()
+    @projectsForInProgress = project_types_as_array(Project).sort()
     @projects = @projects.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
   end
 
@@ -76,24 +77,40 @@ class ProjectsController < ApplicationController
   end
 
   def getProjectTypePartial
-
+  array = []
     if current_admin
-      array = []
-
-      Project.all.each do |project|
-        if project.project_type.include? params[:project_type].gsub('_',' ')
-          array.append(project)
+      if params[:project_type] != "InProgress"
+        Project.all.each do |project|
+          if project.project_type.include? params[:project_type].gsub('_',' ')
+            array.append(project)
+          end
+        end
+      else
+        if params[:project_type] == "InProgress"
+          Project.all.each do |project|
+            if project.completed == false
+              array.append(project)
+            end
+          end
         end
       end
       # projectList = Project.where(project_type: params[:project_type].gsub('_',' '))
     else
       availableProjects = Project.notDrafted
-      array = []
-
-      availableProjects.all.each do |project|
-      if project.project_type.include? params[:project_type].gsub('_',' ')
-        array.append(project)
-      end
+      if params[:project_type] != "InProgress"
+        availableProjects.all.each do |project|
+          if project.project_type.include? params[:project_type].gsub('_',' ')
+            array.append(project)
+          end
+        end
+      else
+        if params[:project_type] == "InProgress"
+          availableProjects.all.each do |project|
+            if project.completed == false
+              array.append(project)
+            end
+          end
+        end
       end
     end
     render partial: '/projects/projectType', locals: {projects: array}
