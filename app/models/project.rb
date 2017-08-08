@@ -10,8 +10,7 @@ class Project < ApplicationRecord
   def project_title
     if self.draft == true
       "#{self.title} (DRAFT)"
-    end
-    if self.completed == true
+    elsif self.completed == true
       "#{self.title}"
     else
       "#{self.title} (In-Progress)"

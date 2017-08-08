@@ -1,25 +1,9 @@
 <div class="table table-striped">
   <%-if projects.any? %>
-    <%-projects.order("created_at DESC").each do |project| %>
+    <%-projects.each do |project| %>
       <%=link_to project_path(project) do %>
         <div class = "col-md-6 center">
-          <%- if project.cover_image.url == "default-thumbnail.jpg" %>
-            <div style="background-image: asset_url('default-thumbnail.jpg');" class="cover_image">
-              <%-if project.draft == true %>
-                <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-              <% else %>
-                <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-              <%end%>
-            </div>
-          <% else %>
-            <div style="background-image: url(<%= "'" + "#{project.cover_image.url}" + "'" %>);" class="cover_image">
-              <%-if project.draft == true %>
-                <%=content_tag(:div, "#{project.title} (DRAFT)", class: "project-panel-title center") %>
-              <% else %>
-                <%=content_tag(:div, "#{project.title}", class: "project-panel-title center") %>
-              <%end%>
-            </div>
-          <%end %>
+          <%=project_cover_image_with_text(project) %>
         </div>
       <% end %>
     <% end %>

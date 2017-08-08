@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  include ProjectsHelper
 
   before_action :authenticate_admin!, except: [:show, :index, :getProjectTypePartial]
 
@@ -9,7 +10,7 @@ class ProjectsController < ApplicationController
       @projects = Project.notDrafted
     end
 
-    @projectsForTags = @projects
+    @projectsForTags = project_types_as_array(Project)
     @projects = @projects.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
   end
 
@@ -72,19 +73,31 @@ class ProjectsController < ApplicationController
   end
 
   def getProjectTypesAsJson
-    render json: Project.all.map(&:project_type).uniq
+    render_project_types_as_json(Project.all)
   end
 
   def getProjectTypePartial
 
     if current_admin
-      projectList = Project.where(project_type: params[:project_type].gsub('_',' '))
+      array = []
+
+      Project.all.each do |project|
+        if project.project_type.include? params[:project_type].gsub('_',' ')
+          array.append(project)
+        end
+      end
+      # projectList = Project.where(project_type: params[:project_type].gsub('_',' '))
     else
       availableProjects = Project.notDrafted
-      projectList = availableProjects.where(project_type: params[:project_type].gsub('_',' '))
-    end
+      array = []
 
-    render partial: '/projects/projectType', locals: {projects: projectList}
+      availableProjects.all.each do |project|
+      if project.project_type.include? params[:project_type].gsub('_',' ')
+        array.append(project)
+      end
+      end
+    end
+    render partial: '/projects/projectType', locals: {projects: array}
   end
 
   private

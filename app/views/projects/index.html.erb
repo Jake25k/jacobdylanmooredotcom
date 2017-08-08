@@ -17,7 +17,7 @@
         Select a type:
         <select id="selector">
           <option value="nil">All</option>
-          <%-@projectsForTags.map(&:project_type).uniq.each do |p|%>
+          <%-@projectsForTags.each do |p|%>
             <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
           <% end %>
         </select>
