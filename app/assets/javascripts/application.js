@@ -19,6 +19,7 @@ $(document).on('turbolinks:load', function() {
         remove_script_host: false,
         browser_spellcheck: true,
         document_base_url: (!window.location.origin ? window.location.protocol + "//" + window.location.host : window.location.origin) + "/",
+        content_style: '.mce-content-body img{ max-width: 750px !important; max-height: 550px; }'
     });
 
     $(function () {

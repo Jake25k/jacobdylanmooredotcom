@@ -20,7 +20,6 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.project_type = (@project.project_type.downcase)
 
     if @project.save
       redirect_to project_path(@project)
