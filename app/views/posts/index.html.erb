@@ -13,32 +13,38 @@
   <% else %>
     <br>
   <% end %>
-  <div class="posts-index-section">
-    <%- @posts.each do |post| %>
-      <div class="panel post-panel">
-        <div class="panel-heading">
-          <h2 class="post-title">
-            <%=link_to post.post_title, post_path(post) %>
-          </h2>
-        </div>
-        <div class="post-description">
-          <%- if post.draft == true %>
-            <b>CURRENTLY IN DRAFT MODE</b><br>
-          <% else %>
-            <b><%= "Created at: " + post.created_at.strftime("%Y %b %e %H:%M") %></b><br>
-            <%- if post.created_at != post.updated_at %>
-              <b><%= "Edited on: " + post.updated_at.strftime("%Y %b %e %H:%M") %></b><br>
+  <%-if @posts.any? %>
+    <div class="posts-index-section">
+      <%- @posts.each do |post| %>
+        <div class="panel post-panel">
+          <div class="panel-heading">
+            <h2 class="post-title">
+              <%=link_to post.post_title, post_path(post) %>
+            </h2>
+          </div>
+          <div class="post-description">
+            <%- if post.draft == true %>
+              <b>CURRENTLY IN DRAFT MODE</b><br>
+            <% else %>
+              <b><%= "Created at: " + post.created_at.strftime("%Y %b %e %H:%M") %></b><br>
+              <%- if post.created_at != post.updated_at %>
+                <b><%= "Edited on: " + post.updated_at.strftime("%Y %b %e %H:%M") %></b><br>
+              <% end %>
             <% end %>
-          <% end %>
-          <br>
-          <%= post.content.html_safe %>
+            <br>
+            <%= post.content.html_safe %>
+          </div>
         </div>
+      <% end %>
+      <div class="center">
+        <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
       </div>
-    <% end %>
-    <div class="center">
-      <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
     </div>
-  </div>
+  <% else %>
+    <div class="panel center">
+      Currently no content.
+    </div>
+  <% end %>
 </div>
 
 <%=render partial: "layouts/footer" %>
