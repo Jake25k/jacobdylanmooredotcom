@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
       @projects = Project.notDrafted
     end
 
-    @projectsForTags = project_types_as_array(Project)
+    @projectsForTags = project_types_as_array(Project).sort()
     @projects = @projects.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
   end
 
