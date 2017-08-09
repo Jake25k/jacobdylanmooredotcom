@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function() {
         }
         else {
             $('#renderedTable').slideUp();
-            $(".tableToDissapear").slideDown();
+            setTimeout(function() { $(".tableToDissapear").slideDown(); }, 400);
         }
     });
 })
