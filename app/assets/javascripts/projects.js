@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
         choice = $('select[id=selector]').val();
         if (choice != "nil") {
             $.post('projects/render/chosenProjects', {project_type: choice}, function (partial) {
-                setTimeout(function() { $('#renderedTable').html(partial); }, 1000);
+                setTimeout(function() { $('#renderedTable').html(partial); }, 500);
             })
             $('#renderedTable').slideDown();
         }
