@@ -13,6 +13,7 @@ $(document).on('turbolinks:load', function() {
                 $('#renderedTable').html(partial)
             })
             $(".tableToDissapear").slideUp()
+            $('#renderedTable').slideUp();
             $('#renderedTable').slideDown();
         }
         else {

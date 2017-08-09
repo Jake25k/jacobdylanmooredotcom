@@ -31,8 +31,8 @@
                   <%- if @projects.any? %>
                     <%- @projects.order("created_at ASC").each do |project| %>
                       <tr>
-                        <th> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
-                        <td> <%=truncate(project.description, length: 15) %> </td>
+                        <th class=""> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
+                        <td class=""> <%=truncate(project.description, length: 15) %> </td>
                       </tr>
                     <% end %>
                   <% else %>
