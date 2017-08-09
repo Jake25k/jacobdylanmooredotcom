@@ -7,13 +7,13 @@
 
 $(document).on('turbolinks:load', function() {
     $("#selector").change(function () {
+        $(".tableToDissapear").slideUp();
+        $('#renderedTable').slideUp();
         choice = $('select[id=selector]').val();
         if (choice != "nil") {
             $.post('projects/render/chosenProjects', {project_type: choice}, function (partial) {
                 $('#renderedTable').html(partial)
             })
-            $(".tableToDissapear").slideUp()
-            $('#renderedTable').slideUp();
             $('#renderedTable').slideDown();
         }
         else {
