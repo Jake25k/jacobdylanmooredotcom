@@ -14,7 +14,7 @@ $(document).on('turbolinks:load', function() {
             $.post('projects/render/chosenProjects', {project_type: choice}, function (partial) {
                 $('#renderedTable').html(partial)
             })
-            $('#renderedTable').slideDown();
+            setTimeout(function() { $('#renderedTable').slideDown(); }, 2000);
         }
         else {
             $(".tableToDissapear").slideDown();
