@@ -152,6 +152,12 @@ footer{
 
 //Mobile support
 
+@media (max-width: 767px) {
+   body{
+    background-attachment: initial;
+  }
+}
+
 @media (max-width: 1200px) {
   .navbar-header {
     float: none;
