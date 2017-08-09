@@ -13,8 +13,6 @@ class ProjectsController < ApplicationController
     @projectsForTags = project_types_as_array(Project).sort()
     @projectsForInProgress = project_types_as_array(Project).sort()
     @projects = @projects.order("created_at DESC").paginate(:page => params[:page], :per_page => 6)
-
-    render layout: 'projects_index'
   end
 
   def new
