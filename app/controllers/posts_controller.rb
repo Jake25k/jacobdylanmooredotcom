@@ -28,11 +28,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by(title: params[:id]) || Post.find_by(id: params[:id])
 
     # Users cant view hidden posts
-    if @post.draft == true
+    if !@project.nil? && @post.draft == true
       if !current_admin
+        redirect_to root_path
+      elsif @post.nil?
         redirect_to root_path
       end
     end

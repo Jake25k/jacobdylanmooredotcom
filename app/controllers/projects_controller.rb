@@ -32,13 +32,15 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.find_by(title: params[:id]) || Project.find_by(id: params[:id])
 
     # Users cant view hidden projects
-    if @project.draft == true
+    if !@project.nil? && @project.draft == true
       if !current_admin
         redirect_to root_path
       end
+    elsif @project.nil?
+      redirect_to root_path
     end
   end
 
