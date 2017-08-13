@@ -26,7 +26,7 @@
   </div>
   <div class="tableToDissapear">
     <%- @projects.each do |project| %>
-      <%=link_to project_path(project.title) do %>
+      <%=link_to project_path(project) do %>
         <div class = "col-md-6 center">
           <%=project_cover_image_with_text(project) %>
         </div>
