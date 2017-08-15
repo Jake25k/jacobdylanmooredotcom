@@ -17,9 +17,9 @@
       </div>
     <div class="panel-body">
       <%- if @post.draft == false %>
-        <b> Published on: <%= @post.created_at.strftime("%Y %b%e %H:%M") %> </b><br>
+        <b> Published on: <%= @post.created_at.strftime("%Y %b %e %H:%M") %> </b><br>
         <%-if @post.updated_at != @post.created_at %>
-            <b> Edited on: <%= @post.updated_at.strftime("%Y %b%e %H:%M") %> </b><br>
+            <b> Edited on: <%= @post.updated_at.strftime("%Y %b %e %H:%M") %> </b><br>
         <% end %>
       <% else %>
           <b>DRAFT MODE (Currently Not Published)</b><br>

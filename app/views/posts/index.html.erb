@@ -32,7 +32,9 @@
               <% end %>
             <% end %>
             <br>
-            <%= post.content.html_safe %>
+            <div class="posts-content">
+              <%= post.content.html_safe %>
+            </div>
           </div>
         </div>
       <% end %>
