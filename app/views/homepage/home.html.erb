@@ -29,7 +29,7 @@
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
                 <table class="table table-striped remove-table-margin-bottom">
                   <%- if @projects.any? %>
-                    <%- @projects.order("created_at ASC").each do |project| %>
+                    <%- @projects.order("created_at DESC").each do |project| %>
                       <tr>
                         <th class=""> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
                         <td class=""> <%=truncate(project.description, length: 15) %> </td>
