@@ -31,8 +31,8 @@
                   <%- if @projects.any? %>
                     <%- @projects.order("created_at DESC").each do |project| %>
                       <tr>
-                        <th class=""> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
-                        <td class=""> <%=truncate(project.description, length: 15) %> </td>
+                        <th class="reduceTableHeader"> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
+                        <td class="moreTableSpace"> <%=truncate(project.description, length: 35) %> </td>
                       </tr>
                     <% end %>
                   <% else %>
@@ -53,8 +53,8 @@
                   <%- if Post.notDrafted.any? %>
                     <%- Post.notDrafted.order("created_at DESC").each do |post| %>
                       <tr>
-                        <th> <%=link_to truncate(post.title, length: 25), post_path(post.id) %> </th>
-                        <td> <%=post.created_at.strftime("%D") %></td>
+                        <th class="increaseTableHeader"> <%=link_to truncate(post.title, length: 35), post_path(post.id) %> </th>
+                        <td class=""> <%=post.created_at.strftime("%D") %></td>
                       </tr>
                     <% end %>
                   <% else %>
