@@ -31,8 +31,8 @@
                   <%- if @projects.any? %>
                     <%- @projects.order("created_at DESC").each do |project| %>
                       <tr>
-                        <th class="reduceTableHeader"> <%=link_to truncate(project.title, length: 25), project_path(project.id) %> </th>
-                        <td class="moreTableSpace"> <%=truncate(project.description, length: 30) %> </td>
+                        <th class="increaseTableHeader"> <%=link_to truncate(project.title, length: 35), project_path(project.id), data: {toggle: "tooltip", placement: "top"}, title: "#{project.description}" %> </th>
+                        <td class=""> <%=project.updated_at.strftime("%D") %></td>
                       </tr>
                     <% end %>
                   <% else %>
