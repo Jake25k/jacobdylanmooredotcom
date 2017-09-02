@@ -20,11 +20,8 @@
               <%=link_to "Contact Me".html_safe, '', class: "sidebar-link", data: {toggle:'modal', target:'#myModal'}  %>
             </div>
             <div class="panel fadePanel4">
-              <div class="panel-heading center-homepage-panel">
-                Featured Projects
-                <div class="float-right right">
-                  <%=link_to "View all", projects_path %>
-                </div>
+              <div class="panel-heading">
+                Featured Projects <%=link_to "View all", projects_path, class: "float-right right" %>
               </div>
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
                 <table class="table table-striped remove-table-margin-bottom">
@@ -42,7 +39,7 @@
               </div>
             </div>
             <div class="panel fadePanel5">
-              <div class="panel-heading">
+              <div class="panel-heading center-homepage-panel">
                  Links
               </div>
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
