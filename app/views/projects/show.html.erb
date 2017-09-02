@@ -26,7 +26,9 @@
     </div>
     <div class="panel-body project-content">
       <%= (@project.content).html_safe %>
-      <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=#{request.original_url}", target: "_blank", class: "btn btn-primary center"%>
+      <%- if current_admin%>
+        <%= link_to "Share", "https://www.facebook.com/dialog/feed?app_id=145634995501895&display=popup&link=#{request.original_url}", target: "_blank", class: "btn btn-primary center"%>
+      <% end %>
     </div>
   </div>
 </div>

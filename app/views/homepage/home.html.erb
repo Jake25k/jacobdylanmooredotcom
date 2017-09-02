@@ -20,7 +20,7 @@
               <%=link_to "Contact Me".html_safe, '', class: "sidebar-link", data: {toggle:'modal', target:'#myModal'}  %>
             </div>
             <div class="panel fadePanel4">
-              <div class="panel-heading">
+              <div class="panel-heading center-homepage-panel">
                 Featured Projects
                 <div class="float-right right">
                   <%=link_to "View all", projects_path %>
@@ -29,7 +29,7 @@
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
                 <table class="table table-striped remove-table-margin-bottom">
                   <%- if @projects.any? %>
-                    <%- @projects.order("updated_at DESC").each do |project| %>
+                    <%- @projects.order("created_at DESC").each do |project| %>
                       <tr>
                         <th class="increaseTableHeader"> <%=link_to truncate(project.title, length: 35), project_path(project.id) %> </th>
                         <td class=""> <%=project.updated_at.strftime("%D") %></td>
@@ -43,24 +43,12 @@
             </div>
             <div class="panel fadePanel5">
               <div class="panel-heading">
-                Recent Blog Posts
-                <div class="float-right right">
-                  <%=link_to "View all", posts_path %>
-                </div>
+                 Links
               </div>
               <div class="panel-body remove-panel-body-padding homepage-table-panels">
-                <table class="table table-striped remove-table-margin-bottom">
-                  <%- if Post.notDrafted.any? %>
-                    <%- Post.notDrafted.order("created_at DESC").each do |post| %>
-                      <tr>
-                        <th class="increaseTableHeader"> <%=link_to truncate(post.title, length: 35), post_path(post.id) %> </th>
-                        <td class=""> <%=post.created_at.strftime("%D") %></td>
-                      </tr>
-                    <% end %>
-                  <% else %>
-                    Currently no content.
-                  <% end %>
-                </table>
+                <%=link_to image_tag("linkedin.png", class: "social-media-icon"), "https://www.linkedin.com/in/jacob-moore-168990115/", target: "_blank" %>
+                <%=link_to image_tag("github-icon.png", class: "social-media-icon"), "https://github.com/Jake25k", target: "_blank"  %>
+                <%=link_to image_tag("nasa-icon.png", class: "social-media-icon"), "https://earthdata.nasa.gov/esdis-project-summer-interns-balance-nasa-work-with-making-connections-for-future-nasa-careers", target: "_blank"  %>
               </div>
             </div>
           </div>

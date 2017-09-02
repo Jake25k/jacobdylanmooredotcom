@@ -64,7 +64,8 @@ footer{
 }
 
 .float-right{
-  float: right;
+  position: relative;
+  bottom: 20px;
 }
 .fixed-right{
   fixed: right;

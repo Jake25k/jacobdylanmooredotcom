@@ -1,6 +1,18 @@
 .leading-photo {
   padding: 10px;
-  display: none;
+}
+
+.social-media-icon{
+  margin-top: 25px;
+  width: 75px;
+  height: auto;
+  a:hover{
+    transform: scale(1.1);
+  }
+}
+
+.center-homepage-panel{
+  margin-bottom: -20px;
 }
 
 //.fadePanel2{
@@ -29,10 +41,6 @@
   cursor: pointer;
 }
 
-a.social-media-icon{
-  text-decoration: none;
-}
-
 .sidebar-link {
   display: block;
   background-color: #222;
@@ -46,7 +54,6 @@ a.social-media-icon{
 
 .parallax-homepage{
   background-image: asset_url('leadingphoto.jpg');
-  display: none;
 
   height: 400px;
 

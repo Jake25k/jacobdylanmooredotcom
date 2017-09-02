@@ -1,5 +1,5 @@
 var ready = function() {
-    $(".leading-photo").fadeIn(2500);
+    // $(".leading-photo").fadeIn(2500);
     // setTimeout(function() { $(".fadePanel2").fadeIn(400); }, 400);
     // setTimeout(function() { $(".fadePanel3").fadeIn(400); }, 800);
     // setTimeout(function() { $(".fadePanel4").fadeIn(400); }, 1200);
