@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   post 'projects/render/chosenProjects', to: 'projects#getProjectTypePartial'
 
   # Blog
-  get resources :posts
+  # get resources :posts
 
   # Admin routes
   devise_for :admins, path: 'admin', path_names: { sign_in: 'login' }
