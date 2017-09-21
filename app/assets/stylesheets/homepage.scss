@@ -68,8 +68,12 @@
   text-shadow: 0 0.8rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 
-.homepage-table-panels{
+.homepage-table-panel{
   overflow-y:scroll;
+  height: 130px;
+}
+
+.homepage-table-panel-fixed{
   height: 130px;
 }
 

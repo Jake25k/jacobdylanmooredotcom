@@ -23,7 +23,7 @@
               <div class="panel-heading">
                 Featured Projects
               </div>
-              <div class="panel-body remove-panel-body-padding homepage-table-panels">
+              <div class="panel-body remove-panel-body-padding homepage-table-panel">
                 <table class="table table-striped remove-table-margin-bottom">
                   <%- if @projects.any? %>
                     <%- @projects.order("created_at DESC").each do |project| %>
@@ -42,7 +42,7 @@
               <div class="panel-heading center-homepage-panel">
                  Links
               </div>
-              <div class="panel-body remove-panel-body-padding homepage-table-panels">
+              <div class="panel-body remove-panel-body-padding homepage-table-panel-fixed">
                 <%=link_to image_tag("linkedin.png", class: "social-media-icon"), "https://www.linkedin.com/in/jacob-moore-168990115/", target: "_blank" %>
                 <%=link_to image_tag("github-icon.png", class: "social-media-icon"), "https://github.com/Jake25k", target: "_blank"  %>
                 <%=link_to image_tag("nasa-icon.png", class: "social-media-icon"), "https://earthdata.nasa.gov/esdis-project-summer-interns-balance-nasa-work-with-making-connections-for-future-nasa-careers", target: "_blank"  %>
