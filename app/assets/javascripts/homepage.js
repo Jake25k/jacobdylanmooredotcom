@@ -5,6 +5,7 @@ var ready = function() {
     setTimeout(function() { $(".fadePanel4").fadeIn(400); }, 1200);
     setTimeout(function() { $(".fadePanel5").fadeIn(400); }, 1600);
     setTimeout(function() { $(".fadePanel6").fadeIn(400); }, 2000);
+    // setTimeout(function() { $("body").addClass("disable-bg").fadeIn(); }, 2400);
 };
 
 // When the user scrolls down 20px from the top of the document, show the button

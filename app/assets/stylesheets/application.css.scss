@@ -1,10 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import "homepage";
 @import "static";
 @import "projects";
 @import "posts";
+@import "homepage";
 
 
 /* universal css */
@@ -12,8 +12,14 @@
 .share-button{
   top: -3px;
 }
+
+.disable-bg{
+  background-color: none;
+}
+
 body{
   background: asset_url('bg.jpg') center center fixed;
+  background-color: black;
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 300px;
@@ -156,6 +162,29 @@ footer{
    body{
      background-position: center;
      background-attachment: fixed;
+  }
+  .leading-photo-on-first-load {
+    padding: 10px;
+    display: block;
+  }
+  .fadePanel2{
+    display: block;
+  }
+
+  .fadePanel3{
+    display: block;
+  }
+
+  .fadePanel4{
+    display: block;
+  }
+
+  .fadePanel5{
+    display: block;
+  }
+
+  .fadePanel6{
+    display: block;
   }
 }
 
