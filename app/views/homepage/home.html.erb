@@ -28,8 +28,7 @@
                   <%- if @projects.any? %>
                     <%- @projects.order("created_at DESC").each do |project| %>
                       <tr>
-                        <th class="increaseTableHeader"> <%=link_to truncate(project.title, length: 35), project_path(project.id) %> </th>
-                        <td class=""> <%=project.updated_at.strftime("%D") %></td>
+                        <th class="center"> <%=link_to truncate(project.title, length: 60), project_path(project.id) %> </th>
                       </tr>
                     <% end %>
                   <% else %>
