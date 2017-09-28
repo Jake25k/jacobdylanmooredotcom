@@ -1,10 +1,10 @@
 var ready = function() {
-    // $(".leading-photo").fadeIn(2500);
-    // setTimeout(function() { $(".fadePanel2").fadeIn(400); }, 400);
-    // setTimeout(function() { $(".fadePanel3").fadeIn(400); }, 800);
-    // setTimeout(function() { $(".fadePanel4").fadeIn(400); }, 1200);
-    // setTimeout(function() { $(".fadePanel5").fadeIn(400); }, 1600);
-    // setTimeout(function() { $(".fadePanel6").fadeIn(400); }, 2000);
+    $(".leading-photo-on-first-load").fadeIn(2500);
+    setTimeout(function() { $(".fadePanel2").fadeIn(400); }, 400);
+    setTimeout(function() { $(".fadePanel3").fadeIn(400); }, 800);
+    setTimeout(function() { $(".fadePanel4").fadeIn(400); }, 1200);
+    setTimeout(function() { $(".fadePanel5").fadeIn(400); }, 1600);
+    setTimeout(function() { $(".fadePanel6").fadeIn(400); }, 2000);
 };
 
 // When the user scrolls down 20px from the top of the document, show the button

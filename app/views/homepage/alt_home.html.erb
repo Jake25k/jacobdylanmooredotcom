@@ -1,0 +1,94 @@
+<body>
+<div class="wrapper">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="parallax-homepage leading-photo" data-toggle="modal" data-target="#myModal2">
+        <div class="center parallax-homepage-text">
+          Jacob Dylan Moore
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-heading center bio-text">
+          NASA Intern &#9679; Software Engineer &#9679; Computer Scientist
+        </div>
+      </div>
+    </div>
+    <main class="col-md-5">
+      <div class="row center">
+        <div>
+          <div class="">
+            <%=link_to "Contact Me".html_safe, '', class: "sidebar-link", data: {toggle:'modal', target:'#myModal'}  %>
+          </div>
+          <div class="panel">
+            <div class="panel-heading">
+              Featured Projects
+            </div>
+            <div class="panel-body remove-panel-body-padding homepage-table-panel">
+              <table class="table table-striped remove-table-margin-bottom">
+                <%- if @projects.any? %>
+                    <%- @projects.order("created_at DESC").each do |project| %>
+                        <tr>
+                          <th class="center"> <%=link_to truncate(project.title, length: 60), project_path(project.id) %> </th>
+                        </tr>
+                    <% end %>
+                <% else %>
+                    Currently no content.
+                <% end %>
+              </table>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-heading center-homepage-panel">
+              Links
+            </div>
+            <div class="panel-body remove-panel-body-padding homepage-table-panel-fixed">
+              <%=link_to image_tag("linkedin.png", class: "social-media-icon"), "https://www.linkedin.com/in/jacob-moore-168990115/", target: "_blank" %>
+              <%=link_to image_tag("github-icon.png", class: "social-media-icon"), "https://github.com/Jake25k", target: "_blank"  %>
+              <%=link_to image_tag("nasa-icon.png", class: "social-media-icon"), "https://earthdata.nasa.gov/esdis-project-summer-interns-balance-nasa-work-with-making-connections-for-future-nasa-careers", target: "_blank"  %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button onclick="topFunction()" id="back-to-top">&uarr;</button>
+    </main>
+  </div>
+</div>
+</body>
+<footer class="center homepage-footer">
+  <p>
+    ______
+    <br>
+    Designed and Created by Jacob Moore. View the source code on <a href="https://github.com/Jake25k" target="_blank"> GitHub</a>.
+  </p>
+</footer>
+
+
+<!-- Modal Contact -->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center" id="myModalLabel">Contact Information:</h4>
+      </div>
+      <div class="modal-body center">
+        |
+        <a href="https://www.linkedin.com/in/jacob-moore-168990115/" target="_blank" class="social-media-icon">LinkedIn</a>
+        | <br>
+        To request a resume, send me an email @ <%= mail_to "moorej37@mymail.nku.edu" %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Picture -->
+<div class="modal fade" id="myModal2" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body center">
+        <%=image_tag 'leadingphoto.jpg', class: "tiny-pic" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Main Page
   root 'homepage#home'
+  get '/home',  to: 'homepage#alt_home',  as:'home'
 
   # Static pages
   get '/about',      to: 'static#about',       as: 'about'
