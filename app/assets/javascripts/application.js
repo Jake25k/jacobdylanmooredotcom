@@ -13,7 +13,7 @@ $(document).on('turbolinks:load', function() {
     tinymce.init({
         selector: 'textarea',
         theme: "modern",
-        toolbar: "bold,italic,underline,|,bullist,numlist,outdent,indent,|,undo,redo,| selectall |,uploadimage",
+        toolbar: "bold,italic,underline,|,bullist,numlist,outdent,indent,|,undo,redo,|, uploadimage",
         plugins: ["uploadimage, link, media"],
         relative_urls: false,
         remove_script_host: false,

@@ -4,9 +4,6 @@ selector:
 browser_spellcheck:
   - true
 
-toolbar:
-  - undo redo | bold italic underline | bullist numlist | indent outdent | pastetext | uploadimage
-
 plugins:
   - image
   - link
