@@ -8,7 +8,6 @@
 //= require tinymce
 //= require autocomplete
 
-
 $(document).on('turbolinks:load', function() {
     tinymce.init({
         selector: 'textarea',

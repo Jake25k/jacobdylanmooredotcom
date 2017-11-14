@@ -8,6 +8,14 @@ module ProjectsHelper
     end
   end
 
+  # def project_cover_image_for_index(project)
+  #   if project.cover_image.url == "default-thumbnail.jpg"
+  #     content_tag(:div, class: "right cover_image_for_show", style: "background-image: asset_url('default-thumbnail.jpg');")
+  #   else
+  #     content_tag(:div, class: "right cover_image_for_show", style: "background-image: url('#{project.cover_image.url}');');")
+  #   end
+  # end
+
   def render_project_types_as_json(projects)
     # render json:
     array = []

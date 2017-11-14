@@ -26,6 +26,16 @@
   background-position: center;
 }
 
+.cover_image_for_show{
+  width: 50%;
+  height: 50%;
+  min-height: 230px;
+  margin-bottom: 5px;
+  background-image: asset_url('default-thumbnail.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 .tableToDissapear{
   a {
     text-decoration: none;

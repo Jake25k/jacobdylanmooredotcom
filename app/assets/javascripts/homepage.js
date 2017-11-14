@@ -6,11 +6,11 @@ var ready = function() {
     setTimeout(function() { $(".fadePanel5").fadeIn(400); }, 1600);
     setTimeout(function() { $(".fadePanel6").fadeIn(400); }, 2000);
 
-    var width = $(document).width();
-    var height = $(document).height();
-
-    console.log(width);
-    console.log(height);
+    // var width = $(document).width();
+    // var height = $(document).height();
+    //
+    // console.log(width);
+    // console.log(height);
 };
 
 $(window).on('resize', function() {
@@ -20,7 +20,7 @@ $(window).on('resize', function() {
     $(".fadePanel4").css("display: block;");
     $(".fadePanel5").css("display: block;");
     $(".fadePanel6").css("display: block;");
-    console.log("hey");
+    // console.log("hey");
 });
 
 // When the user scrolls down 20px from the top of the document, show the button
