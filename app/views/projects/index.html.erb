@@ -16,10 +16,13 @@
       Select a type:
       <select id="selector">
         <option value="nil">All</option>
+        <option value="NASA">NASA</option>
         <option value="InProgress"> In Progress </option>
         <option disabled> ------------- </option>
         <%-@projectsForTags.each do |p|%>
-          <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
+            <%- unless p == 'NASA' #Ignore the tag 'NASA' so it can be displayed on top%>
+              <option value=<%=p.gsub(' ','_')%>> <%=p%> </option>
+            <% end %>
         <% end %>
       </select>
     </h4>
