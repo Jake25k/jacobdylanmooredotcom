@@ -20,6 +20,7 @@ gem 'active_model_serializers', '0.9.4'
 gem 'sqlite3', group: :development
 gem 'pg', group: :production
 gem 'rails_12factor'
+gem 'ffi', '1.9.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
