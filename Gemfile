@@ -18,7 +18,7 @@ gem 'jquery-ui-rails'
 gem 'active_model_serializers', '0.9.4'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', group: :development
-gem 'pg'
+gem 'pg', group: :production
 gem 'rails_12factor'
 gem 'ffi', '1.9.18'
 # Use Puma as the app server
