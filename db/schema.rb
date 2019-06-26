@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20170804165927) do
     t.boolean  "draft",                    default: false
     t.string   "cover_image_file_name"
     t.string   "cover_image_content_type"
-    t.integer  "cover_image_file_size"
+    t.bigint   "cover_image_file_size"
     t.datetime "cover_image_updated_at"
     t.boolean  "completed",                default: true
   end
